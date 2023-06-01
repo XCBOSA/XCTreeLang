@@ -29,19 +29,19 @@ internal protocol XCTLStatement: AnyObject {
 
 internal protocol XCTLListStatementProtocol: AnyObject {
     
-    var breakListEvaluate: Bool { get set }
-    
-    var listResultValue: XCTLRuntimeVariable { get set }
-    
+//    var breakListEvaluate: Bool { get set }
+//
+//    var listResultValue: XCTLRuntimeVariable { get set }
+//
     var conditionParent: XCTLConditionParentStatement? { get }
     
 }
 
 internal protocol XCTLConditionParentStatement: AnyObject {
     
-    var doElse: Bool { get set }
-    
-    var doNext: Bool { get set }
+//    var doElse: Bool { get set }
+//    
+//    var doNext: Bool { get set }
     
 }
 

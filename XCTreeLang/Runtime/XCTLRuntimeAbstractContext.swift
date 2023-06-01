@@ -15,6 +15,7 @@ internal protocol XCTLRuntimeAbstractContext: AnyObject {
     func value(forName name: String) -> XCTLRuntimeVariable?
     func setValue(_ value: XCTLRuntimeVariable, forName name: String)
     func setValueToRoot(_ value: XCTLRuntimeVariable, forName name: String)
+    func setValueIgnoreParent(_ value: XCTLRuntimeVariable, forName name: String)
     
     func addImport(name: String)
     func addExport(name: String)

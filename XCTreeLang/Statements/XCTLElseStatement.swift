@@ -37,7 +37,10 @@ internal class XCTLElseStatement: XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
-        if self.condStmt?.doElse ?? false {
+        guard let condFrame = context.findConditionFrame() else {
+            throw XCTLRuntimeError.invalidConditionFrame
+        }
+        if condFrame.doElse {
             return try self.listStmts.evaluate(inContext: context)
         }
         return .void

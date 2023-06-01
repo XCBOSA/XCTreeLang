@@ -52,16 +52,20 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
             fatalError($0.first?.stringValue ?? "fatalError from XCT")
         }), forName: "appFatalError")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
-            for it in $0 {
+            for (id, it) in $0.enumerated() {
                 self.stdout.append(text: it.toString())
-                self.stdout.append(text: " ")
+                if id != $0.count - 1 {
+                    self.stdout.append(text: " ")
+                }
             }
             return .void
         }), forName: "log")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
-            for it in $0 {
+            for (id, it) in $0.enumerated() {
                 self.stdout.append(text: it.toString())
-                self.stdout.append(text: " ")
+                if id != $0.count - 1 {
+                    self.stdout.append(text: " ")
+                }
             }
             self.stdout.append(text: "\n")
             return .void
@@ -157,6 +161,10 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     internal func setValueToRoot(_ value: XCTLRuntimeVariable, forName name: String) {
         self.values[name] = value
         self.nativeObjectInstance.setValue(value.nativeValue, forKey: name)
+    }
+    
+    internal func setValueIgnoreParent(_ value: XCTLRuntimeVariable, forName name: String) {
+        self.setValue(value, forName: name)
     }
     
     internal func addImport(name: String) {

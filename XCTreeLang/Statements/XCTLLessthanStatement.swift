@@ -43,13 +43,16 @@ internal class XCTLLessthanStatement : XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        guard let condFrame = context.findConditionFrame() else {
+            throw XCTLRuntimeError.invalidConditionFrame
+        }
         guard let originalValue = self.parent?.holdingObject,
               originalValue.type != .typeVoid else {
             throw XCTLRuntimeError.parentNoHoldingObject
         }
-        if self.condStmt?.doNext ?? false {
-            self.condStmt?.doNext = false
-            self.condStmt?.doElse = false
+        if condFrame.doNext {
+            condFrame.doNext = false
+            condFrame.doElse = false
             return try self.childrenStmt.evaluate(inContext: context)
         }
         let compareValue = try self.compareValueStmt.evaluate(inContext: context)
@@ -60,7 +63,7 @@ internal class XCTLLessthanStatement : XCTLStatement {
             throw XCTLRuntimeError.unexpectedVariableType(expect: "number", butGot: compareValue.type.rawValue)
         }
         if compareValue.doubleValue > originalValue.doubleValue {
-            self.condStmt?.doElse = false
+            condFrame.doElse = false
             return try self.childrenStmt.evaluate(inContext: context)
         }
         return .void

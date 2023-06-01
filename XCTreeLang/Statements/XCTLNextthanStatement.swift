@@ -33,8 +33,14 @@ internal class XCTLNextthanStatement: XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
-        (parent as? XCTLListStatementProtocol)?.breakListEvaluate = true
-        parentCond?.doNext = true
+        guard let listFrame = context.findListFrame() else {
+            throw XCTLRuntimeError.invalidListFrame
+        }
+        guard let condFrame = context.findConditionFrame() else {
+            throw XCTLRuntimeError.invalidConditionFrame
+        }
+        listFrame.breakListEvaluate = true
+        condFrame.doNext = true
         return .void
     }
     

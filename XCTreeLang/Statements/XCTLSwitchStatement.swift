@@ -37,6 +37,8 @@ internal class XCTLSwitchStatement: XCTLStatement, XCTLConditionParentStatement 
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        let condFrame = XCTLConditionParentStatementFrame()
+        context.recordConditionFrame(condFrame)
         self.holdingObject = try self.switchingObjectStmt.evaluate(inContext: context)
         if self.holdingObject.type == .typeVoid {
             throw XCTLRuntimeError.unexpectedVariableType(expect: "any", butGot: "void")

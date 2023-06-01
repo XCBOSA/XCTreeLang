@@ -15,10 +15,6 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
     
     var type: XCTLStatementType { .typeStatementList }
     
-    var breakListEvaluate: Bool = false
-    
-    var listResultValue: XCTLRuntimeVariable = .void
-    
     private var statements = [XCTLStatement]()
     
     internal weak var parent: XCTLStatement?
@@ -53,15 +49,20 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        let frame = XCTLListStatementFrame()
+        context.recordListFrame(frame)
         let context = context.makeSubContext()
         var lastValue = XCTLRuntimeVariable.void
         for it in statements {
-            lastValue = try it.evaluate(inContext: context)
-            if self.breakListEvaluate {
+            let newValue = try it.evaluate(inContext: context)
+            if newValue.type != .typeVoid {
+                lastValue = newValue
+            }
+            if frame.breakListEvaluate {
                 break
             }
         }
-        return listResultValue.type == .typeVoid ? lastValue : listResultValue
+        return frame.listResultValue.type == .typeVoid ? lastValue : frame.listResultValue
     }
     
 }

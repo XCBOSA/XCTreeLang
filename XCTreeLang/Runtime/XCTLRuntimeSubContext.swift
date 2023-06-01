@@ -68,6 +68,10 @@ internal class XCTLRuntimeSubContext: XCTLRuntimeAbstractContext {
         self.parent.setValueToRoot(value, forName: name)
     }
     
+    internal func setValueIgnoreParent(_ value: XCTLRuntimeVariable, forName name: String) {
+        self.values[name] = value
+    }
+    
     internal func addImport(name: String) {
         self.importNames.insert(name)
     }
@@ -93,14 +97,14 @@ internal class XCTLRuntimeSubContext: XCTLRuntimeAbstractContext {
     
     func findConditionFrame() -> XCTLConditionParentStatementFrame? {
         if let conditionFrame = self.conditionFrame {
-            return self.conditionFrame
+            return conditionFrame
         }
         return self.parent.findConditionFrame()
     }
     
     func findListFrame() -> XCTLListStatementFrame? {
         if let listFrame = self.listFrame {
-            return self.listFrame
+            return listFrame
         }
         return self.parent.findListFrame()
     }

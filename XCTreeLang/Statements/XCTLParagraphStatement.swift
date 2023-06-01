@@ -65,7 +65,7 @@ internal class XCTLParagraphStatement: XCTLStatement, XCTLLateExecuteStatement {
             if argId >= args.count {
                 throw XCTLRuntimeError.paragraphArgsNotEnough(needCount: self.argumentIdList.count, butGot: args.count)
             }
-            subContext.setValue(args[argId], forName: argumentId)
+            subContext.setValueIgnoreParent(args[argId], forName: argumentId)
             argId += 1
         }
         return try self.runStatements.evaluate(inContext: subContext)

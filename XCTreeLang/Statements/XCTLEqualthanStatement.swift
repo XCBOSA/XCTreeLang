@@ -39,14 +39,18 @@ internal class XCTLEqualthanStatement : XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        guard let condFrame = context.findConditionFrame() else {
+            throw XCTLRuntimeError.invalidConditionFrame
+        }
+        
         guard let originalValue = self.parent?.holdingObject,
               originalValue.type != .typeVoid else {
             throw XCTLRuntimeError.parentNoHoldingObject
         }
         
-        if self.condStmt?.doNext ?? false {
-            self.condStmt?.doNext = false
-            self.condStmt?.doElse = false
+        if condFrame.doNext {
+            condFrame.doNext = false
+            condFrame.doElse = false
             return try self.childrenStmt.evaluate(inContext: context)
         }
         
@@ -62,7 +66,7 @@ internal class XCTLEqualthanStatement : XCTLStatement {
         }
         
         if equalTo {
-            self.condStmt?.doElse = false
+            condFrame.doElse = false
             return try self.childrenStmt.evaluate(inContext: context)
         }
         

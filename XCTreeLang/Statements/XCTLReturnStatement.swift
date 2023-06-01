@@ -45,10 +45,14 @@ internal class XCTLReturnStatement: XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        guard let listFrame = context.findListFrame() else {
+            throw XCTLRuntimeError.invalidListFrame
+        }
+        let condFrame = context.findConditionFrame()
         let value = try self.returnValueStatement.evaluate(inContext: context)
-        self.parentParagraph.runStatements.breakListEvaluate = true
-        self.parentParagraph.runStatements.listResultValue = value
-        self.parentParagraph.runStatements.conditionParent?.doElse = false
+        listFrame.breakListEvaluate = true
+        listFrame.listResultValue = value
+        condFrame?.doElse = false
         return value
     }
     

@@ -21,5 +21,8 @@ public enum XCTLRuntimeError: Error {
     
     case paragraphArgsNotEnough(needCount: Int, butGot: Int)
     
+    case invalidConditionFrame
+    case invalidListFrame
+    
 }
 
