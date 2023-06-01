@@ -24,5 +24,7 @@ public enum XCTLRuntimeError: Error {
     case invalidConditionFrame
     case invalidListFrame
     
+    case variableNotImplementProtocol(protocolName: String)
+    
 }
 

@@ -68,6 +68,7 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
                             throw XCTLRuntimeError.invalidListFrame
                         }
                         lastListFrame.breakListEvaluate = true
+//                        lastListFrame.breakToParagraph = true
                         lastListFrame.listResultValue = frame.listResultValue
                     }
                 }

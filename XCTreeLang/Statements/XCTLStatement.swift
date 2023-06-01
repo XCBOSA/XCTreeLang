@@ -29,10 +29,6 @@ internal protocol XCTLStatement: AnyObject {
 
 internal protocol XCTLListStatementProtocol: AnyObject {
     
-//    var breakListEvaluate: Bool { get set }
-//
-//    var listResultValue: XCTLRuntimeVariable { get set }
-//
     var conditionParent: XCTLConditionParentStatement? { get }
     
     var paragraphHold: Bool { get set }
@@ -40,10 +36,6 @@ internal protocol XCTLListStatementProtocol: AnyObject {
 }
 
 internal protocol XCTLConditionParentStatement: AnyObject {
-    
-//    var doElse: Bool { get set }
-//    
-//    var doNext: Bool { get set }
     
 }
 
@@ -93,6 +85,18 @@ internal class XCTLListStatementFrame {
     }
 }
 
+internal class XCTLForStatementFrame {
+    var breakForEvaluate: Bool
+    
+    internal init() {
+        self.breakForEvaluate = false
+    }
+    
+    internal init(breakForEvaluate: Bool) {
+        self.breakForEvaluate = breakForEvaluate
+    }
+}
+
 internal var XCTLStatementPrototypes: [XCTLStatement] = [
     XCTLImportStatement(),
     XCTLExportStatement(),
@@ -109,7 +113,10 @@ internal var XCTLStatementPrototypes: [XCTLStatement] = [
     XCTLElseStatement(),
     XCTLParagraphStatement(),
     XCTLSetStatement(),
-    XCTLReturnStatement()
+    XCTLReturnStatement(),
+    XCTLForStatement(),
+    XCTLBreakStatement(),
+    XCTLContinueStatement()
 ]
 
 internal var XCTLExpressionPrototypes: [XCTLStatement] = [

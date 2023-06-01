@@ -92,7 +92,7 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
         }), forName: "minus")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
-            var dest: Double = 0
+            var dest: Double = 1
             for it in $0 {
                 if it.type == .typeNumber {
                     dest *= it.doubleValue
@@ -112,6 +112,25 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
             }
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
         }), forName: "div")
+        self.setValue(XCTLRuntimeVariable(funcImpl: {
+            var begin: Double = 0
+            var length: Double = 0
+            var step: Double = 1
+            let args = $0.filter({ $0.type == .typeNumber }).map({ $0.doubleValue })
+            if args.count == 1 {
+                length = args[0]
+            }
+            if args.count == 2 {
+                begin = args[0]
+                length = args[1]
+            }
+            if args.count == 3 {
+                begin = args[0]
+                length = args[1]
+                step = args[2]
+            }
+            return XCTLRuntimeVariable(rawObject: XCTLRange(begin: begin, length: length, step: step))
+        }), forName: "range")
         self.setValue(XCTLRuntimeVariable(type: .typeNumber, rawValue: "\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "-1")"), forName: "appBundleVersion")
         for it in paragraphMembers {
             self.setValue(XCTLRuntimeVariable(funcImplStmt: it.value), forName: it.key)
@@ -194,6 +213,7 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     
     private var conditionFrame: XCTLConditionParentStatementFrame?
     private var listFrame: XCTLListStatementFrame?
+    private var forFrame: XCTLForStatementFrame?
     
     func findConditionFrame() -> XCTLConditionParentStatementFrame? {
         return self.conditionFrame
@@ -209,6 +229,14 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     
     func recordConditionFrame(_ frame: XCTLConditionParentStatementFrame?) {
         self.conditionFrame = frame
+    }
+    
+    func findForFrame() -> XCTLForStatementFrame? {
+        return self.forFrame
+    }
+    
+    func recordForFrame(_ frame: XCTLForStatementFrame?) {
+        self.forFrame = frame
     }
     
     func getParentContext() -> XCTLRuntimeAbstractContext? {

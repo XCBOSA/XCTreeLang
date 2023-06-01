@@ -48,8 +48,12 @@
 		7569167A2A283E78005FF14B /* XCTreeLang.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7520C3DA2A283AFC0010E7F8 /* XCTreeLang.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		756916872A2851DF005FF14B /* XCTLStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916862A2851DF005FF14B /* XCTLStream.swift */; };
 		756916892A286A90005FF14B /* XCTLSetStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916882A286A90005FF14B /* XCTLSetStatement.swift */; };
-		7569168C2A2880CD005FF14B /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569168B2A2880CD005FF14B /* Invocation.swift */; };
 		7569168E2A2896FE005FF14B /* XCTLReturnStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */; };
+		756916912A28C46D005FF14B /* XCTLEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916902A28C46D005FF14B /* XCTLEnumerator.swift */; };
+		756916932A28C4B6005FF14B /* XCTLRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916922A28C4B6005FF14B /* XCTLRange.swift */; };
+		756916952A28C622005FF14B /* XCTLForStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916942A28C622005FF14B /* XCTLForStatement.swift */; };
+		756916972A28DFE7005FF14B /* XCTLBreakStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916962A28DFE7005FF14B /* XCTLBreakStatement.swift */; };
+		756916992A28E1D9005FF14B /* XCTLContinueStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916982A28E1D9005FF14B /* XCTLContinueStatement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +126,12 @@
 		7520C4572A283CCC0010E7F8 /* TestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestApp.entitlements; sourceTree = "<group>"; };
 		756916862A2851DF005FF14B /* XCTLStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLStream.swift; sourceTree = "<group>"; };
 		756916882A286A90005FF14B /* XCTLSetStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLSetStatement.swift; sourceTree = "<group>"; };
-		7569168B2A2880CD005FF14B /* Invocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
 		7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLReturnStatement.swift; sourceTree = "<group>"; };
+		756916902A28C46D005FF14B /* XCTLEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLEnumerator.swift; sourceTree = "<group>"; };
+		756916922A28C4B6005FF14B /* XCTLRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLRange.swift; sourceTree = "<group>"; };
+		756916942A28C622005FF14B /* XCTLForStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLForStatement.swift; sourceTree = "<group>"; };
+		756916962A28DFE7005FF14B /* XCTLBreakStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLBreakStatement.swift; sourceTree = "<group>"; };
+		756916982A28E1D9005FF14B /* XCTLContinueStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLContinueStatement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,16 +175,16 @@
 		7520C3DC2A283AFC0010E7F8 /* XCTreeLang */ = {
 			isa = PBXGroup;
 			children = (
-				7569168A2A2880C4005FF14B /* Utils */,
+				7569168F2A28C447005FF14B /* NativeTypes */,
 				7520C3DD2A283AFC0010E7F8 /* XCTreeLang.h */,
 				7520C4172A283B1E0010E7F8 /* InitializerImpl */,
 				7520C3F32A283B1E0010E7F8 /* Lex */,
 				7520C40D2A283B1E0010E7F8 /* Runtime */,
 				7520C3F72A283B1E0010E7F8 /* Statements */,
 				7520C3F22A283B1E0010E7F8 /* XCTLCompileTimeError.swift */,
+				7520C40C2A283B1E0010E7F8 /* XCTLRuntimeError.swift */,
 				7520C4162A283B1E0010E7F8 /* XCTLEngine.swift */,
 				7520C40B2A283B1E0010E7F8 /* XCTLGenerateProtocol.swift */,
-				7520C40C2A283B1E0010E7F8 /* XCTLRuntimeError.swift */,
 			);
 			path = XCTreeLang;
 			sourceTree = "<group>";
@@ -214,6 +222,9 @@
 				7520C40A2A283B1E0010E7F8 /* XCTLVariableRefStatement.swift */,
 				756916882A286A90005FF14B /* XCTLSetStatement.swift */,
 				7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */,
+				756916942A28C622005FF14B /* XCTLForStatement.swift */,
+				756916962A28DFE7005FF14B /* XCTLBreakStatement.swift */,
+				756916982A28E1D9005FF14B /* XCTLContinueStatement.swift */,
 			);
 			path = Statements;
 			sourceTree = "<group>";
@@ -270,12 +281,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7569168A2A2880C4005FF14B /* Utils */ = {
+		7569168F2A28C447005FF14B /* NativeTypes */ = {
 			isa = PBXGroup;
 			children = (
-				7569168B2A2880CD005FF14B /* Invocation.swift */,
+				756916902A28C46D005FF14B /* XCTLEnumerator.swift */,
+				756916922A28C4B6005FF14B /* XCTLRange.swift */,
 			);
-			path = Utils;
+			path = NativeTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,7 +404,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C42B2A283B1E0010E7F8 /* XCTLElseStatement.swift in Sources */,
-				7569168C2A2880CD005FF14B /* Invocation.swift in Sources */,
 				7520C4212A283B1E0010E7F8 /* XCTLNextthanStatement.swift in Sources */,
 				7520C4342A283B1E0010E7F8 /* XCTLRuntimeAbstractContext.swift in Sources */,
 				7520C4352A283B1E0010E7F8 /* XCTLRuntimeContext.swift in Sources */,
@@ -400,6 +411,7 @@
 				7520C41B2A283B1E0010E7F8 /* XCTLTokenType.swift in Sources */,
 				7520C4322A283B1E0010E7F8 /* XCTLRuntimeSubContext.swift in Sources */,
 				7520C42F2A283B1E0010E7F8 /* XCTLGenerateProtocol.swift in Sources */,
+				756916952A28C622005FF14B /* XCTLForStatement.swift in Sources */,
 				7520C41C2A283B1E0010E7F8 /* XCTLLexer.swift in Sources */,
 				7520C41D2A283B1E0010E7F8 /* XCTLImportStatement.swift in Sources */,
 				7520C41F2A283B1E0010E7F8 /* XCTLLazyEqualStatement.swift in Sources */,
@@ -408,15 +420,19 @@
 				7520C4302A283B1E0010E7F8 /* XCTLRuntimeError.swift in Sources */,
 				7520C41A2A283B1E0010E7F8 /* XCTLToken.swift in Sources */,
 				7520C42E2A283B1E0010E7F8 /* XCTLVariableRefStatement.swift in Sources */,
+				756916992A28E1D9005FF14B /* XCTLContinueStatement.swift in Sources */,
 				7520C42D2A283B1E0010E7F8 /* XCTLListStatement.swift in Sources */,
 				7520C4222A283B1E0010E7F8 /* XCTLInitStatement.swift in Sources */,
 				756916872A2851DF005FF14B /* XCTLStream.swift in Sources */,
 				7520C41E2A283B1E0010E7F8 /* XCTLImmediateStatement.swift in Sources */,
 				756916892A286A90005FF14B /* XCTLSetStatement.swift in Sources */,
+				756916972A28DFE7005FF14B /* XCTLBreakStatement.swift in Sources */,
 				7520C4312A283B1E0010E7F8 /* XCTLRuntimeVariable.swift in Sources */,
+				756916912A28C46D005FF14B /* XCTLEnumerator.swift in Sources */,
 				7520C42C2A283B1E0010E7F8 /* XCTLLessthanStatement.swift in Sources */,
 				7520C4332A283B1E0010E7F8 /* XCTLRuntimeVariableType.swift in Sources */,
 				7520C4202A283B1E0010E7F8 /* XCTLRootStatement.swift in Sources */,
+				756916932A28C4B6005FF14B /* XCTLRange.swift in Sources */,
 				7520C42A2A283B1E0010E7F8 /* XCTLMorethanStatement.swift in Sources */,
 				7520C4292A283B1E0010E7F8 /* XCTLEqualthanStatement.swift in Sources */,
 				7569168E2A2896FE005FF14B /* XCTLReturnStatement.swift in Sources */,

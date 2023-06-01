@@ -41,4 +41,8 @@ internal enum XCTLStatementType: String {
     case typeSet
     case typeReturn
     
+    case typeFor
+    case typeBreak
+    case typeContinue
+    
 }

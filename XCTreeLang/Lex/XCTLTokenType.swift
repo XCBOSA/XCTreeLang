@@ -50,4 +50,9 @@ internal enum XCTLTokenType: String {
     /// return
     case typeReturn
     
+    case typeFor
+    case typeIn
+    case typeBreak
+    case typeContinue
+    
 }
