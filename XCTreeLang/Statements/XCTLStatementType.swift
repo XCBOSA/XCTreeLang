@@ -39,5 +39,6 @@ internal enum XCTLStatementType: String {
     case typeParagraph
     
     case typeSet
+    case typeReturn
     
 }

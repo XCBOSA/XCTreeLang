@@ -14,6 +14,9 @@ public class XCTLRuntimeVariable {
     public var rawObject: NSObject?
     public var rawFunction: (([XCTLRuntimeVariable]) -> XCTLRuntimeVariable)?
     
+//    public var leftValue: XCTLRuntimeVariable?
+//    public var leftValueMemberName: String?
+    
     internal weak var rawFunctionStatement: XCTLStatement?
     
     public func toString() -> String {

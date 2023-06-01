@@ -88,4 +88,29 @@ internal class XCTLRuntimeSubContext: XCTLRuntimeAbstractContext {
         return XCTLRuntimeSubContext(parent: self)
     }
     
+    private var conditionFrame: XCTLConditionParentStatementFrame?
+    private var listFrame: XCTLListStatementFrame?
+    
+    func findConditionFrame() -> XCTLConditionParentStatementFrame? {
+        if let conditionFrame = self.conditionFrame {
+            return self.conditionFrame
+        }
+        return self.parent.findConditionFrame()
+    }
+    
+    func findListFrame() -> XCTLListStatementFrame? {
+        if let listFrame = self.listFrame {
+            return self.listFrame
+        }
+        return self.parent.findListFrame()
+    }
+    
+    func recordListFrame(_ frame: XCTLListStatementFrame?) {
+        self.listFrame = frame
+    }
+    
+    func recordConditionFrame(_ frame: XCTLConditionParentStatementFrame?) {
+        self.conditionFrame = frame
+    }
+    
 }

@@ -44,4 +44,10 @@ internal enum XCTLTokenType: String {
     
     case typeEOF
     
+    /// .
+    case typePoint
+    
+    /// return
+    case typeReturn
+    
 }

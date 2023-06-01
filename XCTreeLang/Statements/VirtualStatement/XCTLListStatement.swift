@@ -53,6 +53,7 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        let context = context.makeSubContext()
         var lastValue = XCTLRuntimeVariable.void
         for it in statements {
             lastValue = try it.evaluate(inContext: context)

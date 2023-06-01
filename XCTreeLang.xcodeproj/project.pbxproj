@@ -48,6 +48,8 @@
 		7569167A2A283E78005FF14B /* XCTreeLang.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7520C3DA2A283AFC0010E7F8 /* XCTreeLang.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		756916872A2851DF005FF14B /* XCTLStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916862A2851DF005FF14B /* XCTLStream.swift */; };
 		756916892A286A90005FF14B /* XCTLSetStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916882A286A90005FF14B /* XCTLSetStatement.swift */; };
+		7569168C2A2880CD005FF14B /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569168B2A2880CD005FF14B /* Invocation.swift */; };
+		7569168E2A2896FE005FF14B /* XCTLReturnStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		7520C4572A283CCC0010E7F8 /* TestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestApp.entitlements; sourceTree = "<group>"; };
 		756916862A2851DF005FF14B /* XCTLStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLStream.swift; sourceTree = "<group>"; };
 		756916882A286A90005FF14B /* XCTLSetStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLSetStatement.swift; sourceTree = "<group>"; };
+		7569168B2A2880CD005FF14B /* Invocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
+		7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLReturnStatement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		7520C3DC2A283AFC0010E7F8 /* XCTreeLang */ = {
 			isa = PBXGroup;
 			children = (
+				7569168A2A2880C4005FF14B /* Utils */,
 				7520C3DD2A283AFC0010E7F8 /* XCTreeLang.h */,
 				7520C4172A283B1E0010E7F8 /* InitializerImpl */,
 				7520C3F32A283B1E0010E7F8 /* Lex */,
@@ -208,6 +213,7 @@
 				7520C4072A283B1E0010E7F8 /* XCTLLessthanStatement.swift */,
 				7520C40A2A283B1E0010E7F8 /* XCTLVariableRefStatement.swift */,
 				756916882A286A90005FF14B /* XCTLSetStatement.swift */,
+				7569168D2A2896FE005FF14B /* XCTLReturnStatement.swift */,
 			);
 			path = Statements;
 			sourceTree = "<group>";
@@ -262,6 +268,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7569168A2A2880C4005FF14B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7569168B2A2880CD005FF14B /* Invocation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C42B2A283B1E0010E7F8 /* XCTLElseStatement.swift in Sources */,
+				7569168C2A2880CD005FF14B /* Invocation.swift in Sources */,
 				7520C4212A283B1E0010E7F8 /* XCTLNextthanStatement.swift in Sources */,
 				7520C4342A283B1E0010E7F8 /* XCTLRuntimeAbstractContext.swift in Sources */,
 				7520C4352A283B1E0010E7F8 /* XCTLRuntimeContext.swift in Sources */,
@@ -404,6 +419,7 @@
 				7520C4202A283B1E0010E7F8 /* XCTLRootStatement.swift in Sources */,
 				7520C42A2A283B1E0010E7F8 /* XCTLMorethanStatement.swift in Sources */,
 				7520C4292A283B1E0010E7F8 /* XCTLEqualthanStatement.swift in Sources */,
+				7569168E2A2896FE005FF14B /* XCTLReturnStatement.swift in Sources */,
 				7520C4192A283B1E0010E7F8 /* XCTLCompileTimeError.swift in Sources */,
 				7520C4382A283B1E0010E7F8 /* XCTLEngine.swift in Sources */,
 				7520C4392A283B1E0010E7F8 /* XCTLViewController.swift in Sources */,

@@ -22,6 +22,7 @@ public class XCTLViewController: UIViewController, XCTLGenerateProtocol {
     }
     
     public override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.systemCyan
         super.viewDidLoad()
         for it in self.children {
             self.view.addSubview(it.view)

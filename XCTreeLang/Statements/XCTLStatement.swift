@@ -52,6 +52,42 @@ internal protocol XCTLLateExecuteStatement: AnyObject {
     
 }
 
+internal protocol XCTLBackableStatement: AnyObject {
+    
+    func evaluateBack(_ valueToBack: XCTLRuntimeVariable, inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable
+    
+}
+
+internal class XCTLConditionParentStatementFrame {
+    var doElse: Bool
+    var doNext: Bool
+    
+    internal init() {
+        self.doElse = true
+        self.doNext = false
+    }
+    
+    internal init(doElse: Bool, doNext: Bool) {
+        self.doElse = doElse
+        self.doNext = doNext
+    }
+}
+
+internal class XCTLListStatementFrame {
+    var breakListEvaluate: Bool
+    var listResultValue: XCTLRuntimeVariable
+    
+    internal init() {
+        self.breakListEvaluate = false
+        self.listResultValue = .void
+    }
+    
+    internal init(breakListEvaluate: Bool, listResultValue: XCTLRuntimeVariable) {
+        self.breakListEvaluate = breakListEvaluate
+        self.listResultValue = listResultValue
+    }
+}
+
 internal var XCTLStatementPrototypes: [XCTLStatement] = [
     XCTLImportStatement(),
     XCTLExportStatement(),
@@ -67,14 +103,16 @@ internal var XCTLStatementPrototypes: [XCTLStatement] = [
     XCTLNextthanStatement(),
     XCTLElseStatement(),
     XCTLParagraphStatement(),
-    XCTLSetStatement()
+    XCTLSetStatement(),
+    XCTLReturnStatement()
 ]
 
 internal var XCTLExpressionPrototypes: [XCTLStatement] = [
     XCTLFunctionCallStatement(),
     XCTLImmediateStatement(),
     XCTLVariableRefStatement(),
-    XCTLSetStatement()
+    XCTLSetStatement(),
+    XCTLReturnStatement()
 ]
 
 internal func XCTLStatementParseNextStatement(forLexer lex: XCTLLexer,

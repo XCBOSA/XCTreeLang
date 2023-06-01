@@ -13,7 +13,7 @@ internal class XCTLSetStatement: XCTLStatement {
     
     var holdingObject: XCTLRuntimeVariable { .void }
     
-    var variableName: String = ""
+    var leftStatement: XCTLBackableStatement & XCTLStatement = XCTLVariableRefStatement()
     
     var setToStatement: XCTLStatement!
     
@@ -27,11 +27,7 @@ internal class XCTLSetStatement: XCTLStatement {
         self.parent = fromParent
         try lex.next()
         
-        let variableNameToken = try lex.next()
-        if variableNameToken.type != .typeIdentifier {
-            throw XCTLCompileTimeError.unexpectTokenInStatement(expect: XCTLTokenType.typeIdentifier.rawValue, butGot: variableNameToken.type.rawValue)
-        }
-        self.variableName = variableNameToken.rawValue
+        try self.leftStatement.parseStatement(fromLexerToSelf: lex, fromParent: self)
         
         let equalToken = try lex.next()
         if equalToken.type != .typeEqual {
@@ -43,8 +39,7 @@ internal class XCTLSetStatement: XCTLStatement {
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
         let value = try self.setToStatement.evaluate(inContext: context)
-        context.setValue(value, forName: self.variableName)
-        return value
+        return try self.leftStatement.evaluateBack(value, inContext: context)
     }
     
 }

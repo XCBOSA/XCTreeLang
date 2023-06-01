@@ -54,16 +54,60 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             for it in $0 {
                 self.stdout.append(text: it.toString())
+                self.stdout.append(text: " ")
             }
             return .void
         }), forName: "log")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             for it in $0 {
                 self.stdout.append(text: it.toString())
+                self.stdout.append(text: " ")
             }
             self.stdout.append(text: "\n")
             return .void
         }), forName: "logn")
+        self.setValue(XCTLRuntimeVariable(funcImpl: {
+            var dest: Double = 0
+            for it in $0 {
+                if it.type == .typeNumber {
+                    dest += it.doubleValue
+                }
+            }
+            return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
+        }), forName: "add")
+        self.setValue(XCTLRuntimeVariable(funcImpl: {
+            var list = $0
+            list = list.filter({ $0.type == .typeNumber })
+            if list.isEmpty { return XCTLRuntimeVariable(type: .typeNumber, rawValue: "0") }
+            var dest: Double = list.removeFirst().doubleValue
+            for it in list {
+                if it.type == .typeNumber {
+                    dest -= it.doubleValue
+                }
+            }
+            return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
+        }), forName: "minus")
+        self.setValue(XCTLRuntimeVariable(funcImpl: {
+            var dest: Double = 0
+            for it in $0 {
+                if it.type == .typeNumber {
+                    dest *= it.doubleValue
+                }
+            }
+            return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
+        }), forName: "mult")
+        self.setValue(XCTLRuntimeVariable(funcImpl: {
+            var list = $0
+            list = list.filter({ $0.type == .typeNumber })
+            if list.isEmpty { return XCTLRuntimeVariable(type: .typeNumber, rawValue: "0") }
+            var dest: Double = list.removeFirst().doubleValue
+            for it in list {
+                if it.type == .typeNumber {
+                    dest /= it.doubleValue
+                }
+            }
+            return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
+        }), forName: "div")
         self.setValue(XCTLRuntimeVariable(type: .typeNumber, rawValue: "\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "-1")"), forName: "appBundleVersion")
         for it in paragraphMembers {
             self.setValue(XCTLRuntimeVariable(funcImplStmt: it.value), forName: it.key)
@@ -95,6 +139,10 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
             let object = XCTLRuntimeVariable(rawObject: valueFromNative)
             self.values[name] = object
             return object
+        }
+        if let klass: AnyObject = NSClassFromString(name),
+           let klass = klass as? NSObject {
+            return XCTLRuntimeVariable(rawObject: klass)
         }
         return .void
     }
@@ -134,6 +182,25 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     
     internal func makeSubContext() -> XCTLRuntimeAbstractContext {
         return XCTLRuntimeSubContext(parent: self)
+    }
+    
+    private var conditionFrame: XCTLConditionParentStatementFrame?
+    private var listFrame: XCTLListStatementFrame?
+    
+    func findConditionFrame() -> XCTLConditionParentStatementFrame? {
+        return self.conditionFrame
+    }
+    
+    func findListFrame() -> XCTLListStatementFrame? {
+        return self.listFrame
+    }
+    
+    func recordListFrame(_ frame: XCTLListStatementFrame?) {
+        self.listFrame = frame
+    }
+    
+    func recordConditionFrame(_ frame: XCTLConditionParentStatementFrame?) {
+        self.conditionFrame = frame
     }
     
 }

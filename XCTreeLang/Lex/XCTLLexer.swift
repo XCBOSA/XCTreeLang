@@ -78,6 +78,8 @@ internal class XCTLLexer {
                 return XCTLToken(type: .typeSet, rawValue: buffer)
             case "else":
                 return XCTLToken(type: .typeElse, rawValue: buffer)
+            case "return":
+                return XCTLToken(type: .typeReturn, rawValue: buffer)
             default:
                 return XCTLToken(type: .typeIdentifier, rawValue: buffer)
             }
@@ -139,6 +141,8 @@ internal class XCTLLexer {
             return XCTLToken(type: .typeXOR, rawValue: "\(char)")
         case "$":
             return XCTLToken(type: .typeValue, rawValue: "\(char)")
+        case ".":
+            return XCTLToken(type: .typePoint, rawValue: "\(char)")
         default:
             throw XCTLCompileTimeError.illegalCharacter(char: char)
         }
