@@ -35,6 +35,8 @@ internal protocol XCTLListStatementProtocol: AnyObject {
 //
     var conditionParent: XCTLConditionParentStatement? { get }
     
+    var paragraphHold: Bool { get set }
+    
 }
 
 internal protocol XCTLConditionParentStatement: AnyObject {
@@ -75,15 +77,18 @@ internal class XCTLConditionParentStatementFrame {
 
 internal class XCTLListStatementFrame {
     var breakListEvaluate: Bool
+    var breakToParagraph: Bool
     var listResultValue: XCTLRuntimeVariable
     
     internal init() {
         self.breakListEvaluate = false
+        self.breakToParagraph = true
         self.listResultValue = .void
     }
     
-    internal init(breakListEvaluate: Bool, listResultValue: XCTLRuntimeVariable) {
+    internal init(breakListEvaluate: Bool, breakToParagraph: Bool, listResultValue: XCTLRuntimeVariable) {
         self.breakListEvaluate = breakListEvaluate
+        self.breakToParagraph = breakToParagraph
         self.listResultValue = listResultValue
     }
 }

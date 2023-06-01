@@ -211,4 +211,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
         self.conditionFrame = frame
     }
     
+    func getParentContext() -> XCTLRuntimeAbstractContext? {
+        return nil
+    }
+    
 }

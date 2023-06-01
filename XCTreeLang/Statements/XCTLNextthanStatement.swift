@@ -40,6 +40,7 @@ internal class XCTLNextthanStatement: XCTLStatement {
             throw XCTLRuntimeError.invalidConditionFrame
         }
         listFrame.breakListEvaluate = true
+        listFrame.breakToParagraph = false
         condFrame.doNext = true
         return .void
     }

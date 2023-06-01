@@ -46,6 +46,7 @@ internal class XCTLParagraphStatement: XCTLStatement, XCTLLateExecuteStatement {
             try lex.next()
         }
         self.runStatements.parent = self
+        self.runStatements.paragraphHold = true
         try self.runStatements.parseStatement(fromLexerToSelf: lex, fromParent: self)
         if lex.paragraphTable[self.paragraphName] != nil {
             throw XCTLCompileTimeError.tooMuchParagraphDefinitionForName(name: self.paragraphName)

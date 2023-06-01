@@ -19,6 +19,8 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
     
     internal weak var parent: XCTLStatement?
     
+    var paragraphHold: Bool = false
+    
     var conditionParent: XCTLConditionParentStatement? {
         var stmt: XCTLStatement? = self.parent
         while true {
@@ -49,9 +51,9 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        let context = context.makeSubContext()
         let frame = XCTLListStatementFrame()
         context.recordListFrame(frame)
-        let context = context.makeSubContext()
         var lastValue = XCTLRuntimeVariable.void
         for it in statements {
             let newValue = try it.evaluate(inContext: context)
@@ -59,6 +61,16 @@ internal class XCTLListStatement: XCTLStatement, XCTLListStatementProtocol {
                 lastValue = newValue
             }
             if frame.breakListEvaluate {
+                if frame.breakToParagraph {
+                    if !self.paragraphHold {
+                        guard let contextParent = context.getParentContext(),
+                              let lastListFrame = contextParent.findListFrame() else {
+                            throw XCTLRuntimeError.invalidListFrame
+                        }
+                        lastListFrame.breakListEvaluate = true
+                        lastListFrame.listResultValue = frame.listResultValue
+                    }
+                }
                 break
             }
         }

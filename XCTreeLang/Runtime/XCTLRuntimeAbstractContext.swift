@@ -30,4 +30,6 @@ internal protocol XCTLRuntimeAbstractContext: AnyObject {
     func recordConditionFrame(_ frame: XCTLConditionParentStatementFrame?)
     func recordListFrame(_ frame: XCTLListStatementFrame?)
     
+    func getParentContext() -> XCTLRuntimeAbstractContext?
+    
 }
