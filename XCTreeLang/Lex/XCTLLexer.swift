@@ -76,6 +76,10 @@ internal class XCTLLexer {
                 return XCTLToken(type: .typeEqualthan, rawValue: buffer)
             case "paragraph":
                 return XCTLToken(type: .typeParagraph, rawValue: buffer)
+            case "function":
+                return XCTLToken(type: .typeParagraph, rawValue: buffer)
+            case "func":
+                return XCTLToken(type: .typeParagraph, rawValue: buffer)
             case "set":
                 return XCTLToken(type: .typeSet, rawValue: buffer)
             case "else":

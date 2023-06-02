@@ -84,7 +84,8 @@ internal class XCTLFunctionCallStatement: XCTLStatement, XCTLExpressionPart {
                 return result
             }
             if funcValue.type != .typeFuncIntrinsic {
-                throw XCTLRuntimeError.unexpectedVariableType(expect: XCTLRuntimeVariableType.typeFuncIntrinsic.rawValue, butGot: funcValue.type.rawValue)
+                context.variableStack.pushVariable(funcValue)
+                return funcValue
             }
             let result = try funcValue.executeFunc(arg: arg)
             context.variableStack.pushVariable(result)

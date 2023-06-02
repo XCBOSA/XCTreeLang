@@ -61,36 +61,35 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
             }
             let rawObject = currentValue.objectValue
             
-            if nextStmt.nextVariableRefStmt == nil {
-                let selector = NSSelectorFromString(memberName)
-                if rawObject.responds(to: selector) {
-                    let funcIntrinsicVariable = XCTLRuntimeVariable { args in
-                        let invocation = try Invocation(target: rawObject, selector: selector)
-                        for index in 0..<invocation.numberOfArguments - 2 {
-                            let arg = args[index]
-                            if arg.type == .typeNumber {
-                                invocation.setArgument(arg.doubleValue, at: index + 2)
-                            } else {
-                                invocation.setArgument(arg.nativeValue, at: index + 2)
-                            }
-                        }
-                        invocation.invoke()
-                        if invocation.returnsObject,
-                           let object = invocation.returnedObject as? NSObject {
-                            return XCTLRuntimeVariable(rawObject: object)
-                        }
-                        return .void
-                    }
-                    context.variableStack.pushVariable(funcIntrinsicVariable)
-                    return funcIntrinsicVariable
-                }
-            }
-            
             var obj: Any?
             let exception = ocTryCatch {
                 obj = rawObject.value(forKey: memberName)
             }
             if exception != nil {
+                if nextStmt.nextVariableRefStmt == nil {
+                    let selector = NSSelectorFromString(memberName)
+                    if rawObject.responds(to: selector) {
+                        let funcIntrinsicVariable = XCTLRuntimeVariable { args in
+                            let invocation = try Invocation(target: rawObject, selector: selector)
+                            for index in 0..<invocation.numberOfArguments - 2 {
+                                let arg = args[index]
+                                if arg.type == .typeNumber {
+                                    invocation.setArgument(arg.doubleValue, at: index + 2)
+                                } else {
+                                    invocation.setArgument(arg.nativeValue, at: index + 2)
+                                }
+                            }
+                            invocation.invoke()
+                            if invocation.returnsObject,
+                               let object = invocation.returnedObject as? NSObject {
+                                return XCTLRuntimeVariable(rawObject: object)
+                            }
+                            return .void
+                        }
+                        context.variableStack.pushVariable(funcIntrinsicVariable)
+                        return funcIntrinsicVariable
+                    }
+                }
                 throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
             }
             guard let obj = obj as? NSObject else {
