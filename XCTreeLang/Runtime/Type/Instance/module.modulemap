@@ -1,0 +1,4 @@
+module XCTLRuntimeTypeInstanceModule {
+    header "XCTLRuntimeTypeInstance.h"
+    export *
+}

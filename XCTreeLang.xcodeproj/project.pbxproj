@@ -54,6 +54,11 @@
 		756916952A28C622005FF14B /* XCTLForStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916942A28C622005FF14B /* XCTLForStatement.swift */; };
 		756916972A28DFE7005FF14B /* XCTLBreakStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916962A28DFE7005FF14B /* XCTLBreakStatement.swift */; };
 		756916992A28E1D9005FF14B /* XCTLContinueStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916982A28E1D9005FF14B /* XCTLContinueStatement.swift */; };
+		7569169C2A28ED2E005FF14B /* XCTLRuntimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569169B2A28ED2E005FF14B /* XCTLRuntimeType.swift */; };
+		756916A12A28FE20005FF14B /* XCTLRuntimeTypeInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 7569169F2A28FE20005FF14B /* XCTLRuntimeTypeInstance.h */; };
+		756916A22A28FE20005FF14B /* XCTLRuntimeTypeInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 756916A02A28FE20005FF14B /* XCTLRuntimeTypeInstance.m */; };
+		756916A52A28FF05005FF14B /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 756916A42A28FF05005FF14B /* module.modulemap */; };
+		756916A72A28FF3D005FF14B /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 756916A62A28FF3D005FF14B /* module.modulemap */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +137,11 @@
 		756916942A28C622005FF14B /* XCTLForStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLForStatement.swift; sourceTree = "<group>"; };
 		756916962A28DFE7005FF14B /* XCTLBreakStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLBreakStatement.swift; sourceTree = "<group>"; };
 		756916982A28E1D9005FF14B /* XCTLContinueStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLContinueStatement.swift; sourceTree = "<group>"; };
+		7569169B2A28ED2E005FF14B /* XCTLRuntimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLRuntimeType.swift; sourceTree = "<group>"; };
+		7569169F2A28FE20005FF14B /* XCTLRuntimeTypeInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTLRuntimeTypeInstance.h; sourceTree = "<group>"; };
+		756916A02A28FE20005FF14B /* XCTLRuntimeTypeInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTLRuntimeTypeInstance.m; sourceTree = "<group>"; };
+		756916A42A28FF05005FF14B /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		756916A62A28FF3D005FF14B /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +195,7 @@
 				7520C40C2A283B1E0010E7F8 /* XCTLRuntimeError.swift */,
 				7520C4162A283B1E0010E7F8 /* XCTLEngine.swift */,
 				7520C40B2A283B1E0010E7F8 /* XCTLGenerateProtocol.swift */,
+				756916A62A28FF3D005FF14B /* module.modulemap */,
 			);
 			path = XCTreeLang;
 			sourceTree = "<group>";
@@ -240,6 +251,7 @@
 		7520C40D2A283B1E0010E7F8 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				7569169A2A28ED20005FF14B /* Type */,
 				7520C40E2A283B1E0010E7F8 /* XCTLRuntimeVariable.swift */,
 				7520C40F2A283B1E0010E7F8 /* XCTLRuntimeSubContext.swift */,
 				7520C4102A283B1E0010E7F8 /* XCTLRuntimeVariableType.swift */,
@@ -290,6 +302,25 @@
 			path = NativeTypes;
 			sourceTree = "<group>";
 		};
+		7569169A2A28ED20005FF14B /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				756916A82A28FFD8005FF14B /* Instance */,
+				7569169B2A28ED2E005FF14B /* XCTLRuntimeType.swift */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		756916A82A28FFD8005FF14B /* Instance */ = {
+			isa = PBXGroup;
+			children = (
+				7569169F2A28FE20005FF14B /* XCTLRuntimeTypeInstance.h */,
+				756916A02A28FE20005FF14B /* XCTLRuntimeTypeInstance.m */,
+				756916A42A28FF05005FF14B /* module.modulemap */,
+			);
+			path = Instance;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -298,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C3E92A283AFC0010E7F8 /* XCTreeLang.h in Headers */,
+				756916A12A28FE20005FF14B /* XCTLRuntimeTypeInstance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C42B2A283B1E0010E7F8 /* XCTLElseStatement.swift in Sources */,
+				7569169C2A28ED2E005FF14B /* XCTLRuntimeType.swift in Sources */,
 				7520C4212A283B1E0010E7F8 /* XCTLNextthanStatement.swift in Sources */,
 				7520C4342A283B1E0010E7F8 /* XCTLRuntimeAbstractContext.swift in Sources */,
 				7520C4352A283B1E0010E7F8 /* XCTLRuntimeContext.swift in Sources */,
@@ -424,6 +457,7 @@
 				7520C42D2A283B1E0010E7F8 /* XCTLListStatement.swift in Sources */,
 				7520C4222A283B1E0010E7F8 /* XCTLInitStatement.swift in Sources */,
 				756916872A2851DF005FF14B /* XCTLStream.swift in Sources */,
+				756916A22A28FE20005FF14B /* XCTLRuntimeTypeInstance.m in Sources */,
 				7520C41E2A283B1E0010E7F8 /* XCTLImmediateStatement.swift in Sources */,
 				756916892A286A90005FF14B /* XCTLSetStatement.swift in Sources */,
 				756916972A28DFE7005FF14B /* XCTLBreakStatement.swift in Sources */,
@@ -434,6 +468,8 @@
 				7520C4202A283B1E0010E7F8 /* XCTLRootStatement.swift in Sources */,
 				756916932A28C4B6005FF14B /* XCTLRange.swift in Sources */,
 				7520C42A2A283B1E0010E7F8 /* XCTLMorethanStatement.swift in Sources */,
+				756916A52A28FF05005FF14B /* module.modulemap in Sources */,
+				756916A72A28FF3D005FF14B /* module.modulemap in Sources */,
 				7520C4292A283B1E0010E7F8 /* XCTLEqualthanStatement.swift in Sources */,
 				7569168E2A2896FE005FF14B /* XCTLReturnStatement.swift in Sources */,
 				7520C4192A283B1E0010E7F8 /* XCTLCompileTimeError.swift in Sources */,
@@ -617,6 +653,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
@@ -624,6 +661,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/XCTreeLang/Runtime/Type/Instance";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -650,6 +689,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
@@ -657,6 +697,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/XCTreeLang/Runtime/Type/Instance";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

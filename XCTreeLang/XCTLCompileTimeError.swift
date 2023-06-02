@@ -17,4 +17,7 @@ public enum XCTLCompileTimeError: Error {
     case unexpectParentStatementType(expect: String, butGot: String)
     case tooMuchParagraphDefinitionForName(name: String)
     
+    case duplicatedMemberVariable(name: String)
+    case duplicatedMemberParagraph(name: String)
+    
 }

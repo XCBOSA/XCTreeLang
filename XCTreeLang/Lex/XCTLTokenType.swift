@@ -54,5 +54,6 @@ internal enum XCTLTokenType: String {
     case typeIn
     case typeBreak
     case typeContinue
+    case typeClass
     
 }

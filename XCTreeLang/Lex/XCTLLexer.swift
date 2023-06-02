@@ -88,6 +88,8 @@ internal class XCTLLexer {
                 return XCTLToken(type: .typeBreak, rawValue: buffer)
             case "continue":
                 return XCTLToken(type: .typeContinue, rawValue: buffer)
+            case "class":
+                return XCTLToken(type: .typeClass, rawValue: buffer)
             default:
                 return XCTLToken(type: .typeIdentifier, rawValue: buffer)
             }

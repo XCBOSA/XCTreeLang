@@ -25,6 +25,7 @@ public enum XCTLRuntimeError: Error {
     case invalidListFrame
     
     case variableNotImplementProtocol(protocolName: String)
+    case unknownMethodForName(name: String)
     
 }
 
