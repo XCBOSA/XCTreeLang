@@ -78,6 +78,8 @@ internal class XCTLInitStatement: XCTLStatement {
             }
             try lex.next()
         }
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

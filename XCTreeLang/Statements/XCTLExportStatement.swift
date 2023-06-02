@@ -29,6 +29,8 @@ internal class XCTLExportStatement: XCTLStatement {
             throw XCTLCompileTimeError.unexpectTokenInStatement(expect: XCTLTokenType.typeIdentifier.rawValue, butGot: variableNameToken.type.rawValue)
         }
         self.variableName = variableNameToken.rawValue
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

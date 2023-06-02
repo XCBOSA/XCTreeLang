@@ -28,6 +28,8 @@ internal class XCTLImmediateStatement: XCTLStatement, XCTLExpressionPart {
     func parseStatement(fromLexerToSelf lex: XCTLLexer, fromParent: XCTLStatement?) throws {
         self.parent = fromParent
         self.immediateToken = try lex.next()
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

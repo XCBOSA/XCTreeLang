@@ -17,6 +17,8 @@ internal class XCTLLexer {
     
     internal var paragraphTable = [String : XCTLStatement]()
     
+    internal weak var lastStatement: XCTLStatement?
+    
     init(document: String) {
         self.document = [Character](document)
     }
@@ -153,6 +155,8 @@ internal class XCTLLexer {
             return XCTLToken(type: .typeValue, rawValue: "\(char)")
         case ".":
             return XCTLToken(type: .typePoint, rawValue: "\(char)")
+        case ":":
+            return XCTLToken(type: .typeColon, rawValue: "\(char)")
         default:
             throw XCTLCompileTimeError.illegalCharacter(char: char)
         }

@@ -19,9 +19,18 @@ char *kRootViewControllerKVOKey = "kRootViewControllerKVOKey";
 @property (nonatomic, strong) UIViewController *previewViewController;
 @property (nonatomic, copy) NSArray<NSLayoutConstraint *> *previewConstraints;
 
+@property (nonatomic, strong) UIView *testView;
+
 @end
 
 @implementation RootViewController
+
+- (UIView *)testView {
+    if (!_testView) {
+        _testView = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    }
+    return _testView;
+}
 
 - (void)viewDidLoad {
     [self.view addSubview:self.sourceTextView];

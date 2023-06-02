@@ -17,4 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+NSException * _Nullable ocTryCatch(void(^tryBlock)(void));
+
 NS_ASSUME_NONNULL_END

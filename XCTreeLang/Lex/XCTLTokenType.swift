@@ -41,6 +41,8 @@ internal enum XCTLTokenType: String {
     case typeXOR
     /// $
     case typeValue
+    /// :
+    case typeColon
     
     case typeEOF
     

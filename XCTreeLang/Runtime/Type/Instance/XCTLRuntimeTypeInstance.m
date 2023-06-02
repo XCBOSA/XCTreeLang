@@ -165,3 +165,14 @@ const IMP methodIMPSlotR[methodIMPSlotCnt] = {
 const char methodIMPSoltRType[methodIMPSlotCnt][20] = {
     "@@:", "@@:@", "@@:@@", "@@:@@@", "@@:@@@@", "@@:@@@@@", "@@:@@@@@@", "@@:@@@@@@@", "@@:@@@@@@@@"
 };
+
+NSException * _Nullable ocTryCatch(void(^tryBlock)(void)) {
+    @try {
+        tryBlock();
+        CGRect s;
+        return nil;
+    }
+    @catch (NSException *exception) {
+        return exception;
+    }
+}

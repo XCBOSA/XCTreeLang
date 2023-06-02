@@ -46,6 +46,8 @@ public class XCTLForStatement: XCTLStatement {
         self.enumeratorVariableStatement = try self.parseNextExpression(forLexer: lex, terminator: .typeOpenBrace)
         
         try self.listStatement.parseStatement(fromLexerToSelf: lex, fromParent: self)
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

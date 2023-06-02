@@ -12,7 +12,7 @@ public class XCTLRuntimeVariable {
     public var type: XCTLRuntimeVariableType
     public var rawValue: String
     public var rawObject: NSObject?
-    public var rawFunction: (([XCTLRuntimeVariable]) -> XCTLRuntimeVariable)?
+    public var rawFunction: (([XCTLRuntimeVariable]) throws -> XCTLRuntimeVariable)?
     
 //    public var leftValue: XCTLRuntimeVariable?
 //    public var leftValueMemberName: String?
@@ -43,7 +43,7 @@ public class XCTLRuntimeVariable {
         self.rawFunction = nil
     }
     
-    public init(funcImpl: @escaping ([XCTLRuntimeVariable]) -> XCTLRuntimeVariable) {
+    public init(funcImpl: @escaping ([XCTLRuntimeVariable]) throws -> XCTLRuntimeVariable) {
         self.type = .typeFuncIntrinsic
         self.rawValue = ""
         self.rawObject = nil
@@ -101,8 +101,8 @@ public class XCTLRuntimeVariable {
         }
     }
     
-    public func executeFunc(arg: [XCTLRuntimeVariable]) -> XCTLRuntimeVariable {
-        return self.rawFunction!(arg)
+    public func executeFunc(arg: [XCTLRuntimeVariable]) throws -> XCTLRuntimeVariable {
+        return try self.rawFunction!(arg)
     }
     
 }

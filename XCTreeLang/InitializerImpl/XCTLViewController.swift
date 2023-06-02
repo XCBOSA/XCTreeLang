@@ -7,6 +7,7 @@
 
 import UIKit
 
+@objcMembers
 public class XCTLViewController: UIViewController, XCTLGenerateProtocol {
     
     public static func initWithXCT(_ arg: [Any]) throws -> NSObject {

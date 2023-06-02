@@ -38,7 +38,7 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return .void
-        }), forName: "image")
+        }), forName: "image:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             if $0.count == 1,
                let val = $0.first {
@@ -47,10 +47,10 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return .void
-        }), forName: "string")
+        }), forName: "string:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             fatalError($0.first?.stringValue ?? "fatalError from XCT")
-        }), forName: "appFatalError")
+        }), forName: "appFatalError:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             for (id, it) in $0.enumerated() {
                 self.stdout.append(text: it.toString())
@@ -59,7 +59,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return .void
-        }), forName: "log")
+        }), forNames: "log", "log:", "log:_:", "log:_:_:", "log:_:_:_:",
+                      "log:_:_:_:_:", "log:_:_:_:_:_:", "log:_:_:_:_:_:_:", "log:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             for (id, it) in $0.enumerated() {
                 self.stdout.append(text: it.toString())
@@ -69,7 +70,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
             }
             self.stdout.append(text: "\n")
             return .void
-        }), forName: "logn")
+        }), forNames: "logn", "logn:", "logn:_:", "logn:_:_:", "logn:_:_:_:",
+                      "logn:_:_:_:_:", "logn:_:_:_:_:_:", "logn:_:_:_:_:_:_:", "logn:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             var dest: Double = 0
             for it in $0 {
@@ -78,7 +80,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
-        }), forName: "add")
+        }), forNames: "add", "add:", "add:_:", "add:_:_:", "add:_:_:_:",
+                      "add:_:_:_:_:", "add:_:_:_:_:_:", "add:_:_:_:_:_:_:", "add:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             var list = $0
             list = list.filter({ $0.type == .typeNumber })
@@ -90,7 +93,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
-        }), forName: "minus")
+        }), forNames: "minus", "minus:", "minus:_:", "minus:_:_:", "minus:_:_:_:",
+                      "minus:_:_:_:_:", "minus:_:_:_:_:_:", "minus:_:_:_:_:_:_:", "minus:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             var dest: Double = 1
             for it in $0 {
@@ -99,7 +103,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
-        }), forName: "mult")
+        }), forNames: "mult", "mult:", "mult:_:", "mult:_:_:", "mult:_:_:_:",
+                      "mult:_:_:_:_:", "mult:_:_:_:_:_:", "mult:_:_:_:_:_:_:", "mult:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             var list = $0
             list = list.filter({ $0.type == .typeNumber })
@@ -111,7 +116,8 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 }
             }
             return XCTLRuntimeVariable(type: .typeNumber, rawValue: dest.description)
-        }), forName: "div")
+        }), forNames: "div", "div:", "div:_:", "div:_:_:", "div:_:_:_:",
+                      "div:_:_:_:_:", "div:_:_:_:_:_:", "div:_:_:_:_:_:_:", "div:_:_:_:_:_:_:_:")
         self.setValue(XCTLRuntimeVariable(funcImpl: {
             var begin: Double = 0
             var length: Double = 0
@@ -130,7 +136,7 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
                 step = args[2]
             }
             return XCTLRuntimeVariable(rawObject: XCTLRange(begin: begin, length: length, step: step))
-        }), forName: "range")
+        }), forNames: "range:", "range:_:", "range:_:_:")
         self.setValue(XCTLRuntimeVariable(type: .typeNumber, rawValue: "\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "-1")"), forName: "appBundleVersion")
         for it in paragraphMembers {
             self.setValue(XCTLRuntimeVariable(funcImplStmt: it.value), forName: it.key)
@@ -171,9 +177,15 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     }
     
     internal func setValue(_ value: XCTLRuntimeVariable, forName name: String) {
-        self.values[name] = value
-        if exportNames.contains(name) {
-            self.nativeObjectInstance.setValue(value.nativeValue, forKey: name)
+        self.setValue(value, forNames: name)
+    }
+    
+    internal func setValue(_ value: XCTLRuntimeVariable, forNames names: String...) {
+        for name in names {
+            self.values[name] = value
+            if exportNames.contains(name) {
+                self.nativeObjectInstance.setValue(value.nativeValue, forKey: name)
+            }
         }
     }
     

@@ -35,6 +35,8 @@ internal class XCTLSetStatement: XCTLStatement {
         }
         
         self.setToStatement = try self.parseNextExpression(forLexer: lex)
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

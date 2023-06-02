@@ -26,6 +26,8 @@ internal class XCTLRootStatement: XCTLStatement {
             let statement = try self.parseNextStatement(forLexer: lex)
             self.statements.append(statement)
         }
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

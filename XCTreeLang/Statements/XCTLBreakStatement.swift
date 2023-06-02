@@ -39,6 +39,8 @@ internal class XCTLBreakStatement: XCTLStatement {
             throw XCTLCompileTimeError.unexpectParentStatementType(expect: "for", butGot: "...")
         }
         try _ = lex.next()
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

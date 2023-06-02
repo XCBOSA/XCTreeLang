@@ -34,6 +34,8 @@ internal class XCTLElseStatement: XCTLStatement {
         }
         self.condStmt = condStmt
         try listStmts.parseStatement(fromLexerToSelf: lex, fromParent: self)
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

@@ -36,6 +36,8 @@ internal class XCTLEqualthanStatement : XCTLStatement {
         try lex.next()
         self.compareValueStmt = try self.parseNextExpression(forLexer: lex, terminator: .typeOpenBrace)
         try self.childrenStmt.parseStatement(fromLexerToSelf: lex, fromParent: self)
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

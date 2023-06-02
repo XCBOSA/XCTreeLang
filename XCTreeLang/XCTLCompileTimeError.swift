@@ -20,4 +20,6 @@ public enum XCTLCompileTimeError: Error {
     case duplicatedMemberVariable(name: String)
     case duplicatedMemberParagraph(name: String)
     
+    case invalidObjectForFuncCall
+    
 }

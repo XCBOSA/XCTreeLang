@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import XCTLRuntimeTypeInstanceModule
 
 internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, XCTLExpressionPart {
     
@@ -40,6 +41,8 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
             self.nextVariableRefStmt = XCTLVariableRefStatement()
             try self.nextVariableRefStmt?.parseStatement(fromLexerToSelf: lex, fromParent: fromParent)
         }
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
@@ -57,8 +60,40 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
                 throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
             }
             let rawObject = currentValue.objectValue
-            guard let obj = rawObject.value(forKey: memberName),
-                  let obj = obj as? NSObject else {
+            
+            if nextStmt.nextVariableRefStmt == nil {
+                let selector = NSSelectorFromString(memberName)
+                if rawObject.responds(to: selector) {
+                    let funcIntrinsicVariable = XCTLRuntimeVariable { args in
+                        let invocation = try Invocation(target: rawObject, selector: selector)
+                        for index in 0..<invocation.numberOfArguments - 2 {
+                            let arg = args[index]
+                            if arg.type == .typeNumber {
+                                invocation.setArgument(arg.doubleValue, at: index + 2)
+                            } else {
+                                invocation.setArgument(arg.nativeValue, at: index + 2)
+                            }
+                        }
+                        invocation.invoke()
+                        if invocation.returnsObject,
+                           let object = invocation.returnedObject as? NSObject {
+                            return XCTLRuntimeVariable(rawObject: object)
+                        }
+                        return .void
+                    }
+                    context.variableStack.pushVariable(funcIntrinsicVariable)
+                    return funcIntrinsicVariable
+                }
+            }
+            
+            var obj: Any?
+            let exception = ocTryCatch {
+                obj = rawObject.value(forKey: memberName)
+            }
+            if exception != nil {
+                throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
+            }
+            guard let obj = obj as? NSObject else {
                 throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
             }
             let newValue = XCTLRuntimeVariable(rawObject: obj)
@@ -96,10 +131,17 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
                 break
             }
             
-            guard let obj = rawObject.value(forKey: memberName),
-                  let obj = obj as? NSObject else {
+            var obj: Any?
+            let exception = ocTryCatch {
+                obj = rawObject.value(forKey: memberName)
+            }
+            if exception != nil {
                 throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
             }
+            guard let obj = obj as? NSObject else {
+                throw XCTLRuntimeError.unknownMemberForVariable(memberName: memberName, variableName: refName)
+            }
+            
             let newValue = XCTLRuntimeVariable(rawObject: obj)
 //            newValue.leftValue = currentValue
 //            newValue.leftValueMemberName = memberName

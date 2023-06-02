@@ -14,10 +14,42 @@
             filePath = "XCTreeLang/Statements/XCTLEqualthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE0B5C7A-BCB9-4114-8800-525E2AAC4483 - c4f83559009bfe9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+               <Location
+                  uuid = "CE0B5C7A-BCB9-4114-8800-525E2AAC4483 - c4f83559009bff5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +62,42 @@
             filePath = "XCTreeLang/Statements/XCTLEqualthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7417D2D-E757-4FA5-A8B8-DEA15E2D9450 - c4f83559009bfffb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1892">
+               </Location>
+               <Location
+                  uuid = "D7417D2D-E757-4FA5-A8B8-DEA15E2D9450 - c4f83559009bffb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1892">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,10 +110,42 @@
             filePath = "XCTreeLang/Statements/XCTLElseStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB80C1F4-0108-45C0-B5F8-4D92615C620E - 782bad6195591ad2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLElseStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLElseStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "BB80C1F4-0108-45C0-B5F8-4D92615C620E - 782bad6195591b6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLElseStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLElseStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,10 +158,42 @@
             filePath = "XCTreeLang/Statements/XCTLLessthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2A529CD4-A110-4D23-B16C-CAFAFAD754ED - 22f22d847ab1596e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "2036">
+               </Location>
+               <Location
+                  uuid = "2A529CD4-A110-4D23-B16C-CAFAFAD754ED - 22f22d847ab15e90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "2036">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,10 +206,42 @@
             filePath = "XCTreeLang/Statements/XCTLLessthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38990361-989A-4D6E-A247-CA5959582158 - 22f22d847ab15ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1948">
+               </Location>
+               <Location
+                  uuid = "38990361-989A-4D6E-A247-CA5959582158 - 22f22d847ab15e14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1948">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,10 +254,42 @@
             filePath = "XCTreeLang/Statements/XCTLNextthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F9CC256C-1B93-464D-9004-6BB6EE749095 - dc67b751bda1c2a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLNextthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLNextthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "F9CC256C-1B93-464D-9004-6BB6EE749095 - dc67b751bda1c2e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLNextthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLNextthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,10 +302,42 @@
             filePath = "XCTreeLang/Statements/XCTLNextthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7C12A73-E896-4CFC-8D9B-063BEDC41511 - dc67b751bda1c2c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLNextthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLNextthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "A7C12A73-E896-4CFC-8D9B-063BEDC41511 - dc67b751bda1dd79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLNextthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLNextthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "348">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,10 +350,42 @@
             filePath = "XCTreeLang/Statements/XCTLParagraphStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "doRealEvaluate(inContext:withArgs:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "20B938DB-244D-4B20-ACBD-5D1F98A9EBE2 - 6ad8d95f2a05c731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLParagraphStatement.doRealEvaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext, withArgs: Swift.Array&lt;XCTreeLang.XCTLRuntimeVariable&gt;) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLParagraphStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "20B938DB-244D-4B20-ACBD-5D1F98A9EBE2 - 6ad8d95f2a05c731"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLParagraphStatement.doRealEvaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext, withArgs: Swift.Array&lt;XCTreeLang.XCTLRuntimeVariable&gt;) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLParagraphStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +398,42 @@
             filePath = "XCTreeLang/Statements/XCTLEqualthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1157454B-7DC1-435C-810F-6DAF5F2B563C - c4f83559009bf16c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+               <Location
+                  uuid = "1157454B-7DC1-435C-810F-6DAF5F2B563C - c4f83559009bf12e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLEqualthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLEqualthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,10 +446,42 @@
             filePath = "XCTreeLang/Statements/XCTLMorethanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B991C77B-91F4-4A57-AC7E-D5C29D505801 - e06e50c0e5a637ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "2040">
+               </Location>
+               <Location
+                  uuid = "B991C77B-91F4-4A57-AC7E-D5C29D505801 - e06e50c0e5a63668"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "2040">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +494,42 @@
             filePath = "XCTreeLang/Statements/XCTLMorethanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DE99138A-2D5F-4CC4-A11F-FAD9B843566D - e06e50c0e5a6362a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1952">
+               </Location>
+               <Location
+                  uuid = "DE99138A-2D5F-4CC4-A11F-FAD9B843566D - e06e50c0e5a636d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1952">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,10 +542,42 @@
             filePath = "XCTreeLang/Statements/XCTLMorethanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4D995B8D-8DF5-4246-B928-809413B74EE8 - e06e50c0e5a635f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  uuid = "4D995B8D-8DF5-4246-B928-809413B74EE8 - e06e50c0e5a635bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -206,10 +590,42 @@
             filePath = "XCTreeLang/Statements/XCTLMorethanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "587D9FDF-0913-4C57-A5C2-CACC492FAA36 - e06e50c0e5a6359e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+               <Location
+                  uuid = "587D9FDF-0913-4C57-A5C2-CACC492FAA36 - e06e50c0e5a63458"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLMorethanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLMorethanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +638,42 @@
             filePath = "XCTreeLang/Statements/XCTLLessthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFE888DF-761B-43C6-8561-25412C711F3F - 22f22d847ab15f3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  uuid = "BFE888DF-761B-43C6-8561-25412C711F3F - 22f22d847ab15f7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,10 +686,42 @@
             filePath = "XCTreeLang/Statements/XCTLLessthanStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E6E67FFE-B566-47BA-8D1F-AAE8337CB438 - 22f22d847ab15f5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+               <Location
+                  uuid = "E6E67FFE-B566-47BA-8D1F-AAE8337CB438 - 22f22d847ab15c80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLLessthanStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLLessthanStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -274,6 +754,288 @@
             endingLineNumber = "29"
             landmarkName = "parseStatement(fromLexerToSelf:fromParent:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02E0C6D5-D1F2-4EC6-A561-65772D6F96C6 - 8320ac76ede50b83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLImportStatement.parseStatement(fromLexerToSelf: XCTreeLang.XCTLLexer, fromParent: Swift.Optional&lt;XCTreeLang.XCTLStatement&gt;) throws -&gt; ()"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLImportStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "02E0C6D5-D1F2-4EC6-A561-65772D6F96C6 - 8320ac76ede50b83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLImportStatement.parseStatement(fromLexerToSelf: XCTreeLang.XCTLLexer, fromParent: Swift.Optional&lt;XCTreeLang.XCTLStatement&gt;) throws -&gt; ()"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLImportStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83F6BEAD-F186-4CC5-873F-E006BE479EBB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "evaluate(inContext:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "evaluateBack(_:inContext:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE - b2953dc3cfc33c98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE - b2953dc3cfc33c98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "820">
+               </Location>
+               <Location
+                  uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE - b2953dc3cfc33d1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "820">
+               </Location>
+               <Location
+                  uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE - b2953dc3cfc33d5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "820">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0E92D41-309C-419D-BDAE-E705374FB334"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "evaluateBack(_:inContext:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0E92D41-309C-419D-BDAE-E705374FB334 - b2953dc3cfc33a56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1716">
+               </Location>
+               <Location
+                  uuid = "C0E92D41-309C-419D-BDAE-E705374FB334 - b2953dc3cfc33a56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1800">
+               </Location>
+               <Location
+                  uuid = "C0E92D41-309C-419D-BDAE-E705374FB334 - b2953dc3cfc33aca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "1800">
+               </Location>
+               <Location
+                  uuid = "C0E92D41-309C-419D-BDAE-E705374FB334 - b2953dc3cfc33b0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "1800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "evaluateBack(_:inContext:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A - b2953dc3cfc33aeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2020">
+               </Location>
+               <Location
+                  uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A - b2953dc3cfc33aeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2396">
+               </Location>
+               <Location
+                  uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A - b2953dc3cfc33b6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "2396">
+               </Location>
+               <Location
+                  uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A - b2953dc3cfc33ba1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "2396">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -30,6 +30,8 @@ internal class XCTLNextthanStatement: XCTLStatement {
             throw XCTLCompileTimeError.unexpectParentStatementType(expect: "codeList & cond", butGot: "\(fromParent?.type.rawValue ?? "none")")
         }
         try lex.next()
+        
+        lex.lastStatement = self
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
