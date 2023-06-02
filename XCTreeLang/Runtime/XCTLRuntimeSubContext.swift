@@ -133,4 +133,6 @@ internal class XCTLRuntimeSubContext: XCTLRuntimeAbstractContext {
         self.forFrame = frame
     }
     
+    var variableStack = XCTLRuntimeVariableStackFrame()
+    
 }

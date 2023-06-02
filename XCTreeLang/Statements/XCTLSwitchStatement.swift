@@ -32,7 +32,7 @@ internal class XCTLSwitchStatement: XCTLStatement, XCTLConditionParentStatement 
     func parseStatement(fromLexerToSelf lex: XCTLLexer, fromParent: XCTLStatement?) throws {
         self.parent = fromParent
         try lex.next()
-        self.switchingObjectStmt = try self.parseNextStatement(forLexer: lex, prototypes: XCTLExpressionPrototypes)
+        self.switchingObjectStmt = try self.parseNextExpression(forLexer: lex, terminator: .typeOpenBrace)
         try self.childrenStmt.parseStatement(fromLexerToSelf: lex, fromParent: self)
     }
     

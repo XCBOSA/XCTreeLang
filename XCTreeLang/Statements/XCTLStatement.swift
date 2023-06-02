@@ -122,9 +122,7 @@ internal var XCTLStatementPrototypes: [XCTLStatement] = [
 internal var XCTLExpressionPrototypes: [XCTLStatement] = [
     XCTLFunctionCallStatement(),
     XCTLImmediateStatement(),
-    XCTLVariableRefStatement(),
-    XCTLSetStatement(),
-    XCTLReturnStatement()
+    XCTLVariableRefStatement()
 ]
 
 internal func XCTLStatementParseNextStatement(forLexer lex: XCTLLexer,
@@ -155,6 +153,12 @@ internal extension XCTLStatement {
     
     func parseNextStatement(forLexer lex: XCTLLexer, prototypes: [XCTLStatement] = XCTLStatementPrototypes) throws -> XCTLStatement {
         return try XCTLStatementParseNextStatement(forLexer: lex, fromParent: self, prototypes: prototypes)
+    }
+    
+    func parseNextExpression(forLexer lex: XCTLLexer, terminator: XCTLTokenType = .typeEOF) throws -> XCTLStatement & XCTLExpression {
+        let prefixExpr = XCTLPrefixExpression()
+        try prefixExpr.parseStatement(fromLexerToSelf: lex, fromParent: self, terminatorType: terminator)
+        return prefixExpr
     }
     
 }

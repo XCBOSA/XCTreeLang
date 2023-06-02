@@ -243,4 +243,6 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
         return nil
     }
     
+    var variableStack = XCTLRuntimeVariableStackFrame()
+    
 }

@@ -41,7 +41,7 @@ internal class XCTLReturnStatement: XCTLStatement {
         
         try lex.next()
         
-        self.returnValueStatement = try self.parseNextStatement(forLexer: lex, prototypes: XCTLExpressionPrototypes)
+        self.returnValueStatement = try self.parseNextExpression(forLexer: lex)
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

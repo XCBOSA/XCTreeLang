@@ -45,4 +45,6 @@ internal enum XCTLStatementType: String {
     case typeBreak
     case typeContinue
     
+    case expressionPrefix
+    
 }

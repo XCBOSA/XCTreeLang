@@ -34,7 +34,7 @@ internal class XCTLSetStatement: XCTLStatement {
             throw XCTLCompileTimeError.unexpectTokenInStatement(expect: XCTLTokenType.typeEqual.rawValue, butGot: equalToken.type.rawValue)
         }
         
-        self.setToStatement = try self.parseNextStatement(forLexer: lex, prototypes: XCTLExpressionPrototypes)
+        self.setToStatement = try self.parseNextExpression(forLexer: lex)
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

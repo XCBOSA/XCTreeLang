@@ -34,7 +34,7 @@ internal class XCTLEqualthanStatement : XCTLStatement {
         self.parent = fromParent
         self.condStmt = condStmt
         try lex.next()
-        self.compareValueStmt = try self.parseNextStatement(forLexer: lex)
+        self.compareValueStmt = try self.parseNextExpression(forLexer: lex, terminator: .typeOpenBrace)
         try self.childrenStmt.parseStatement(fromLexerToSelf: lex, fromParent: self)
     }
     

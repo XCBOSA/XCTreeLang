@@ -27,5 +27,8 @@ public enum XCTLRuntimeError: Error {
     case variableNotImplementProtocol(protocolName: String)
     case unknownMethodForName(name: String)
     
+    case variableStackNoObject
+    case variableStackNotEmptyAfterTerminator
+    
 }
 

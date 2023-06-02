@@ -43,7 +43,7 @@ public class XCTLForStatement: XCTLStatement {
             throw XCTLCompileTimeError.unexpectTokenInStatement(expect: XCTLTokenType.typeIn.rawValue, butGot: inToken.rawValue)
         }
         
-        self.enumeratorVariableStatement = try self.parseNextStatement(forLexer: lex, prototypes: XCTLExpressionPrototypes)
+        self.enumeratorVariableStatement = try self.parseNextExpression(forLexer: lex, terminator: .typeOpenBrace)
         
         try self.listStatement.parseStatement(fromLexerToSelf: lex, fromParent: self)
     }

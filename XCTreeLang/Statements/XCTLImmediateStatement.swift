@@ -7,9 +7,11 @@
 
 import Foundation
 
-internal class XCTLImmediateStatement: XCTLStatement {
+internal class XCTLImmediateStatement: XCTLStatement, XCTLExpressionPart {
     
     var type: XCTLStatementType { .typeImmediateValue }
+    
+    var expressionValue: XCTLExpressionValue { .product }
     
     var holdingObject: XCTLRuntimeVariable { .void }
     
@@ -29,16 +31,19 @@ internal class XCTLImmediateStatement: XCTLStatement {
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {
+        var resultValue: XCTLRuntimeVariable
         switch immediateToken.type {
         case .typeImmediateString:
-            return .init(type: .typeString, rawValue: immediateToken.rawValue)
+            resultValue = .init(type: .typeString, rawValue: immediateToken.rawValue)
         case .typeImmediateNumber:
-            return .init(type: .typeNumber, rawValue: immediateToken.rawValue)
+            resultValue = .init(type: .typeNumber, rawValue: immediateToken.rawValue)
         case .typeImmediateBool:
-            return .init(type: .typeBoolean, rawValue: immediateToken.rawValue)
+            resultValue = .init(type: .typeBoolean, rawValue: immediateToken.rawValue)
         default:
             fatalError()
         }
+        context.variableStack.pushVariable(resultValue)
+        return resultValue
     }
     
 }

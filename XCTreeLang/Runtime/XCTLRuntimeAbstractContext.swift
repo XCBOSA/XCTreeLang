@@ -7,6 +7,24 @@
 
 import Foundation
 
+internal class XCTLRuntimeVariableStackFrame {
+    
+    private var stack = [XCTLRuntimeVariable]()
+    
+    internal func pushVariable(_ variable: XCTLRuntimeVariable) {
+        self.stack.append(variable)
+    }
+    
+    internal func popVariable() -> XCTLRuntimeVariable? {
+        self.stack.popLast()
+    }
+    
+    internal var isEmpty: Bool {
+        return self.stack.isEmpty
+    }
+    
+}
+
 internal protocol XCTLRuntimeAbstractContext: AnyObject {
     
     var nativeObjectInstance: NSObject { get }
@@ -33,5 +51,7 @@ internal protocol XCTLRuntimeAbstractContext: AnyObject {
     func recordForFrame(_ frame: XCTLForStatementFrame?)
     
     func getParentContext() -> XCTLRuntimeAbstractContext?
+    
+    var variableStack: XCTLRuntimeVariableStackFrame { get set }
     
 }

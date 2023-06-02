@@ -42,7 +42,7 @@ internal class XCTLLazyEqualStatement: XCTLStatement {
         if equalToken.type != .typeEqual {
             throw XCTLCompileTimeError.unexpectTokenInStatement(expect: XCTLTokenType.typeEqual.rawValue, butGot: equalToken.type.rawValue)
         }
-        self.equalToStatement = try self.parseNextStatement(forLexer: lex)
+        self.equalToStatement = try self.parseNextExpression(forLexer: lex)
     }
     
     func evaluate(inContext context: XCTLRuntimeAbstractContext) throws -> XCTLRuntimeVariable {

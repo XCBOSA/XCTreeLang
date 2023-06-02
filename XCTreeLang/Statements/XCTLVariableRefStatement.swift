@@ -7,9 +7,11 @@
 
 import Foundation
 
-internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement {
+internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, XCTLExpressionPart {
     
     var type: XCTLStatementType { .typeVariableRef }
+    
+    var expressionValue: XCTLExpressionValue { .product }
     
     var holdingObject: XCTLRuntimeVariable { .void }
     
@@ -65,6 +67,7 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement {
             currentValue = newValue
             nextMemberStmt = nextStmt.nextVariableRefStmt
         }
+        context.variableStack.pushVariable(currentValue)
         return currentValue
     }
     
