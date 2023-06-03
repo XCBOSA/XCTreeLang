@@ -161,7 +161,7 @@
 		756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Enumerator.swift"; sourceTree = "<group>"; };
 		756916BE2A2B97BF005FF14B /* InitialContent.xct */ = {isa = PBXFileReference; lastKnownFileType = text; path = InitialContent.xct; sourceTree = "<group>"; };
 		756916C02A2B9963005FF14B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		756916C22A2BA4A1005FF14B /* Screen-Shot-Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen-Shot-Example1.png"; path = "../../../../../../var/folders/zv/_sqgml5j1jn8n3hnsrhn8jy40000gn/T/TemporaryItems/NSIRD_screencaptureui_dfllAN/Screen-Shot-Example1.png"; sourceTree = "<group>"; };
+		756916C42A2BA600005FF14B /* Screen-Shot-Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen-Shot-Example1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +186,7 @@
 		7520C3D02A283AFC0010E7F8 = {
 			isa = PBXGroup;
 			children = (
-				756916C12A2BA456005FF14B /* Github-Images */,
+				756916C12A2BA456005FF14B /* GithubImages */,
 				756916C02A2B9963005FF14B /* README.md */,
 				7520C3DC2A283AFC0010E7F8 /* XCTreeLang */,
 				756916AD2A29CD1A005FF14B /* Interop */,
@@ -368,12 +368,12 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		756916C12A2BA456005FF14B /* Github-Images */ = {
+		756916C12A2BA456005FF14B /* GithubImages */ = {
 			isa = PBXGroup;
 			children = (
-				756916C22A2BA4A1005FF14B /* Screen-Shot-Example1.png */,
+				756916C42A2BA600005FF14B /* Screen-Shot-Example1.png */,
 			);
-			path = "Github-Images";
+			path = GithubImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
