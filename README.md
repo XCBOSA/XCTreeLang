@@ -1,6 +1,9 @@
 # (WIP) XCTreeLang (XCT) Interpreter
 
 ### 一种基于iOS Runtime的脚本语言，支持优雅的调用OC的函数。
+
+![ImageExample1](https://github.com/XCBOSA/XCTreeLang/blob/2e23c0ff7117f5cc717976bd8ea349e924d5379c/GithubImages/Screen-Shot-Example1.png)
+
 这个项目最开始的目的是作为依赖注入的配置文件格式，后续慢慢的加入可执行语句，进而想要做一种脚本语言。
 
 由于是全新的语法，且需要支持OC互操作，所以加了一些专属特性。例如，在JSPatch中，您可能会这么写：
