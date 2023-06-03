@@ -162,6 +162,7 @@
 		756916BE2A2B97BF005FF14B /* InitialContent.xct */ = {isa = PBXFileReference; lastKnownFileType = text; path = InitialContent.xct; sourceTree = "<group>"; };
 		756916C02A2B9963005FF14B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		756916C42A2BA600005FF14B /* Screen-Shot-Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen-Shot-Example1.png"; sourceTree = "<group>"; };
+		756916C72A2BA713005FF14B /* Screen-Shot-Example2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen-Shot-Example2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				756916C42A2BA600005FF14B /* Screen-Shot-Example1.png */,
+				756916C72A2BA713005FF14B /* Screen-Shot-Example2.png */,
 			);
 			path = GithubImages;
 			sourceTree = "<group>";
