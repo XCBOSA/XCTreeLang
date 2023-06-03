@@ -94,7 +94,13 @@ char *kRootViewControllerKVOKey = "kRootViewControllerKVOKey";
     if (!_sourceTextView) {
         _sourceTextView = [self makeTextView];
         _sourceTextView.backgroundColor = UIColor.systemBackgroundColor;
-        _sourceTextView.text = [NSUserDefaults.standardUserDefaults stringForKey:@"code"];
+        NSString *savedCode = [NSUserDefaults.standardUserDefaults stringForKey:@"code"];
+        if (savedCode == nil || savedCode.length == 0) {
+            savedCode = [NSString stringWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"InitialContent" ofType:@"xct"]
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:nil];
+        }
+        _sourceTextView.text = savedCode;
         _sourceTextView.delegate = self;
     }
     return _sourceTextView;

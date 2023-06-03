@@ -67,6 +67,7 @@
 		756916B52A2B7D20005FF14B /* XCTLInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 756916B32A2B7D20005FF14B /* XCTLInvocation.m */; };
 		756916B92A2B86AA005FF14B /* XCTLSwiftInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916B82A2B86AA005FF14B /* XCTLSwiftInvocation.swift */; };
 		756916BD2A2B91E7005FF14B /* NSArray+Enumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */; };
+		756916BF2A2B97BF005FF14B /* InitialContent.xct in Resources */ = {isa = PBXBuildFile; fileRef = 756916BE2A2B97BF005FF14B /* InitialContent.xct */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		756916B32A2B7D20005FF14B /* XCTLInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTLInvocation.m; sourceTree = "<group>"; };
 		756916B82A2B86AA005FF14B /* XCTLSwiftInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLSwiftInvocation.swift; sourceTree = "<group>"; };
 		756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Enumerator.swift"; sourceTree = "<group>"; };
+		756916BE2A2B97BF005FF14B /* InitialContent.xct */ = {isa = PBXFileReference; lastKnownFileType = text; path = InitialContent.xct; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 				7520C4412A283CA70010E7F8 /* AppDelegate.m */,
 				7520C4462A283CA70010E7F8 /* RootViewController.h */,
 				7520C4472A283CA70010E7F8 /* RootViewController.m */,
+				756916BE2A2B97BF005FF14B /* InitialContent.xct */,
 				7520C44C2A283CA80010E7F8 /* Assets.xcassets */,
 				7520C44E2A283CA80010E7F8 /* LaunchScreen.storyboard */,
 				7520C4512A283CA80010E7F8 /* Info.plist */,
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C4502A283CA80010E7F8 /* LaunchScreen.storyboard in Resources */,
+				756916BF2A2B97BF005FF14B /* InitialContent.xct in Resources */,
 				7520C44D2A283CA80010E7F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

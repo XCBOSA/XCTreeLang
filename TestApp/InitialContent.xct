@@ -1,0 +1,42 @@
+paragraph fib(inArray: array maxInputNumber: max) {
+    array.addObject(0)
+    for i in range(1 max) {
+        switch i {
+            lessthan 2 { nextthan }
+            equalthan 2 {
+                array.addObject(i)
+            }
+            else {
+                set last = array.objectAtIndex(minus(i 1))
+                set prev = array.objectAtIndex(minus(i 2))
+                set newValue = add(last prev)
+                array.addObject(newValue)
+            }
+        }
+    }
+}
+
+paragraph main {
+    NSMutableArray array { }
+    fib(inArray: array maxInputNumber: 10)
+    set id = 0
+    for it in array {
+        switch id {
+            equalthan 0 { continue }
+            else {
+                logn("fib(" id ") =" it)
+            }
+        }
+        set id = add(id 1)
+    }
+    setUpPreview()
+}
+
+paragraph setUpPreview {
+    export previewViewController
+    XCTLViewController previewViewController { } {
+        .view.backgroundColor = UIColor.cyanColor
+    }
+}
+
+main()
