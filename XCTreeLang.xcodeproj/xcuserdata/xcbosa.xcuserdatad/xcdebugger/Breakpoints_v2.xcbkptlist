@@ -947,8 +947,8 @@
             filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "evaluateBack(_:inContext:)"
             landmarkType = "7">
             <Locations>
@@ -1012,6 +1012,21 @@
                   endingLineNumber = "139"
                   offsetFromSymbolStart = "844">
                </Location>
+               <Location
+                  uuid = "C3B0488E-C243-48F8-A91B-52C5156798CE - b2953dc3cfc33d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "844">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1025,8 +1040,8 @@
             filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "evaluateBack(_:inContext:)"
             landmarkType = "7">
             <Locations>
@@ -1090,6 +1105,21 @@
                   endingLineNumber = "153"
                   offsetFromSymbolStart = "1848">
                </Location>
+               <Location
+                  uuid = "C0E92D41-309C-419D-BDAE-E705374FB334 - b2953dc3cfc33b2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "1848">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1103,8 +1133,8 @@
             filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "evaluateBack(_:inContext:)"
             landmarkType = "7">
             <Locations>
@@ -1168,6 +1198,21 @@
                   endingLineNumber = "156"
                   offsetFromSymbolStart = "2444">
                </Location>
+               <Location
+                  uuid = "13C4A8A4-B94A-43B8-8601-88F10E7EAC2A - b2953dc3cfc33b4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluateBack(_: XCTreeLang.XCTLRuntimeVariable, inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "2444">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1181,8 +1226,8 @@
             filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
             <Locations>
@@ -1246,6 +1291,21 @@
                   endingLineNumber = "108"
                   offsetFromSymbolStart = "2596">
                </Location>
+               <Location
+                  uuid = "4D7F9232-F6DA-4173-82A0-FC2A293AB3FF - 819511eaf925e71d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2596">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1259,8 +1319,8 @@
             filePath = "XCTreeLang/Statements/XCTLVariableRefStatement.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "evaluate(inContext:)"
             landmarkType = "7">
             <Locations>
@@ -1322,6 +1382,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
                   endingLineNumber = "111"
+                  offsetFromSymbolStart = "3192">
+               </Location>
+               <Location
+                  uuid = "F8BFE289-40FB-4CC2-8200-C286FC68D912 - 819511eaf925e7f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XCTreeLang.XCTLVariableRefStatement.evaluate(inContext: XCTreeLang.XCTLRuntimeAbstractContext) throws -&gt; XCTreeLang.XCTLRuntimeVariable"
+                  moduleName = "XCTreeLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcbosa/Documents/LibraryProjects/XCTreeLang/XCTreeLang/Statements/XCTLVariableRefStatement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
                   offsetFromSymbolStart = "3192">
                </Location>
             </Locations>

@@ -214,14 +214,10 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
         }
         if let klass: AnyObject = NSClassFromString(name),
            let klass = klass as? NSObject {
-            let invocation = try Invocation(target: klass, selector: NSSelectorFromString("alloc"))
-            invocation.invoke()
-            if let obj = invocation.returnedObject as? NSObject {
-                let invocation = try Invocation(target: obj, selector: NSSelectorFromString("init"))
-                invocation.invoke()
-                if let obj = invocation.returnedObject as? NSObject {
-                    return XCTLRuntimeVariable(rawObject: obj)
-                }
+            if let object = klass.perform(NSSelectorFromString("alloc")).takeRetainedValue() as? NSObject {
+                let invocation = XCTLSwiftInvocation(target: object, selector: NSSelectorFromString("init"))
+                let result = try invocation.invokeMemberFunc(params: [])
+                return try XCTLRuntimeVariable.variableFromSwiftAny(result)
             }
         }
         throw XCTLRuntimeError.generateProtocolNotFoundedError(name: name)

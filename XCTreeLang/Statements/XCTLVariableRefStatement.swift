@@ -84,22 +84,7 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
                         let funcIntrinsicVariable = XCTLRuntimeVariable { args in
                             let invocation = XCTLSwiftInvocation(target: rawObject, selector: selector)
                             let value = try invocation.invokeMemberFunc(params: args.map({ $0.nativeValue }))
-                            if value is NSNull {
-                                return .void
-                            }
-                            if let value = value as? String {
-                                return XCTLRuntimeVariable(type: .typeString, rawValue: value)
-                            }
-                            if let value = value as? Double {
-                                return XCTLRuntimeVariable(type: .typeNumber, rawValue: value.description)
-                            }
-                            if let value = value as? Bool {
-                                return XCTLRuntimeVariable(type: .typeBoolean, rawValue: value.description)
-                            }
-                            if let value = value as? NSObject {
-                                return XCTLRuntimeVariable(rawObject: value)
-                            }
-                            throw XCTLRuntimeError.callingTypeEncodingError
+                            return try XCTLRuntimeVariable.variableFromSwiftAny(value)
                         }
                         context.variableStack.pushVariable(funcIntrinsicVariable)
                         return funcIntrinsicVariable

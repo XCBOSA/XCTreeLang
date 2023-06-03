@@ -29,6 +29,25 @@ public class XCTLRuntimeVariable: NSObject {
         return self.rawValue
     }
     
+    public class func variableFromSwiftAny(_ value: Any) throws -> XCTLRuntimeVariable {
+        if value is NSNull {
+            return .void
+        }
+        if let value = value as? String {
+            return XCTLRuntimeVariable(type: .typeString, rawValue: value)
+        }
+        if let value = value as? Double {
+            return XCTLRuntimeVariable(type: .typeNumber, rawValue: value.description)
+        }
+        if let value = value as? Bool {
+            return XCTLRuntimeVariable(type: .typeBoolean, rawValue: value.description)
+        }
+        if let value = value as? NSObject {
+            return XCTLRuntimeVariable(rawObject: value)
+        }
+        throw XCTLRuntimeError.callingTypeEncodingError
+    }
+    
     public init(type: XCTLRuntimeVariableType, rawValue: String) {
         self.type = type
         self.rawValue = rawValue
