@@ -1,4 +1,5 @@
 module XCTLRuntimeTypeInstanceModule {
     header "XCTLRuntimeTypeInstance.h"
+    header "XCTLInvocation.h"
     export *
 }

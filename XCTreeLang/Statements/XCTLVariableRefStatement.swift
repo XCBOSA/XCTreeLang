@@ -10,6 +10,8 @@ import XCTLRuntimeTypeInstanceModule
 
 internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, XCTLExpressionPart {
     
+    internal static let ignorePropertiesClass = [NSArray.self, NSDictionary.self]
+    
     var type: XCTLStatementType { .typeVariableRef }
     
     var expressionValue: XCTLExpressionValue { .product }
@@ -65,26 +67,39 @@ internal class XCTLVariableRefStatement: XCTLStatement, XCTLBackableStatement, X
             let exception = ocTryCatch {
                 obj = rawObject.value(forKey: memberName)
             }
-            if exception != nil {
+            if exception != nil || Self.ignorePropertiesClass.contains(where: { rawObject.isKind(of: $0) }) {
                 if nextStmt.nextVariableRefStmt == nil {
+                    if let array = rawObject as? NSArray {
+                        switch memberName {
+                        case "count":
+                            let returnValue = XCTLRuntimeVariable(type: .typeNumber, rawValue: array.count.description)
+                            context.variableStack.pushVariable(returnValue)
+                            return returnValue
+                        default:
+                            break
+                        }
+                    }
                     let selector = NSSelectorFromString(memberName)
                     if rawObject.responds(to: selector) {
                         let funcIntrinsicVariable = XCTLRuntimeVariable { args in
-                            let invocation = try Invocation(target: rawObject, selector: selector)
-                            for index in 0..<invocation.numberOfArguments - 2 {
-                                let arg = args[index]
-                                if arg.type == .typeNumber {
-                                    invocation.setArgument(arg.doubleValue, at: index + 2)
-                                } else {
-                                    invocation.setArgument(arg.nativeValue, at: index + 2)
-                                }
+                            let invocation = XCTLSwiftInvocation(target: rawObject, selector: selector)
+                            let value = try invocation.invokeMemberFunc(params: args.map({ $0.nativeValue }))
+                            if value is NSNull {
+                                return .void
                             }
-                            invocation.invoke()
-                            if invocation.returnsObject,
-                               let object = invocation.returnedObject as? NSObject {
-                                return XCTLRuntimeVariable(rawObject: object)
+                            if let value = value as? String {
+                                return XCTLRuntimeVariable(type: .typeString, rawValue: value)
                             }
-                            return .void
+                            if let value = value as? Double {
+                                return XCTLRuntimeVariable(type: .typeNumber, rawValue: value.description)
+                            }
+                            if let value = value as? Bool {
+                                return XCTLRuntimeVariable(type: .typeBoolean, rawValue: value.description)
+                            }
+                            if let value = value as? NSObject {
+                                return XCTLRuntimeVariable(rawObject: value)
+                            }
+                            throw XCTLRuntimeError.callingTypeEncodingError
                         }
                         context.variableStack.pushVariable(funcIntrinsicVariable)
                         return funcIntrinsicVariable

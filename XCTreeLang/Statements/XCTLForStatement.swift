@@ -55,8 +55,16 @@ public class XCTLForStatement: XCTLStatement {
         if enumeratorVariable.type != .typeObject {
             throw XCTLRuntimeError.unexpectedVariableType(expect: XCTLRuntimeVariableType.typeObject.rawValue, butGot: enumeratorVariable.type.rawValue)
         }
-        guard let enumerator = enumeratorVariable.objectValue as? XCTLEnumerator else {
-            throw XCTLRuntimeError.variableNotImplementProtocol(protocolName: "XCTLEnumerator")
+        
+        var enumerator: XCTLEnumerator!
+        if let enumeratorImpl = enumeratorVariable.objectValue as? XCTLEnumerator {
+            enumerator = enumeratorImpl
+        }
+        if let enumeratorProvider = enumeratorVariable.objectValue as? XCTLEnumeratorProvider {
+            enumerator = enumeratorProvider.provideEnumerator()
+        }
+        if enumerator == nil {
+            throw XCTLRuntimeError.variableNotImplementProtocol(protocolName: "XCTLEnumerator or XCTLEnumeratorProvider")
         }
         
         let context = context.makeSubContext()

@@ -86,6 +86,8 @@ class TypeMapping {
         case is URLQueryItem: return object as? NSURLQueryItem
         case is URLRequest: return object as? NSURLRequest
         case is UUID: return object as? NSUUID
+        case is Double: return object as? NSNumber
+        case is Bool: return object as? NSValue
         default: return nil
         }
     }

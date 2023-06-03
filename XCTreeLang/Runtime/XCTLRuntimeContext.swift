@@ -207,12 +207,24 @@ internal class XCTLRuntimeContext: XCTLRuntimeAbstractContext {
     }
     
     internal func allocateObject(name: String, args: [XCTLRuntimeVariable]) throws -> XCTLRuntimeVariable {
-        guard let generator = self.generators[name] else {
-            throw XCTLRuntimeError.generateProtocolNotFoundedError(name: name)
+        if let generator = self.generators[name] {
+            let nativeObject = try generator.initWithXCT(args.compactMap({ $0.nativeValue }))
+            let object = XCTLRuntimeVariable(rawObject: nativeObject)
+            return object
         }
-        let nativeObject = try generator.initWithXCT(args.compactMap({ $0.nativeValue }))
-        let object = XCTLRuntimeVariable(rawObject: nativeObject)
-        return object
+        if let klass: AnyObject = NSClassFromString(name),
+           let klass = klass as? NSObject {
+            let invocation = try Invocation(target: klass, selector: NSSelectorFromString("alloc"))
+            invocation.invoke()
+            if let obj = invocation.returnedObject as? NSObject {
+                let invocation = try Invocation(target: obj, selector: NSSelectorFromString("init"))
+                invocation.invoke()
+                if let obj = invocation.returnedObject as? NSObject {
+                    return XCTLRuntimeVariable(rawObject: obj)
+                }
+            }
+        }
+        throw XCTLRuntimeError.generateProtocolNotFoundedError(name: name)
     }
     
     internal func addLazyStatement(_ stmt: XCTLStatement) {

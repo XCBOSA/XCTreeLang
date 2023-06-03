@@ -63,6 +63,10 @@
 		756916AC2A29A357005FF14B /* XCTLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916AB2A29A357005FF14B /* XCTLExpression.swift */; };
 		756916AF2A29CD2C005FF14B /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916AE2A29CD2C005FF14B /* Invocation.swift */; };
 		756916B12A29D74E005FF14B /* TypeMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916B02A29D74E005FF14B /* TypeMapping.swift */; };
+		756916B42A2B7D20005FF14B /* XCTLInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 756916B22A2B7D20005FF14B /* XCTLInvocation.h */; };
+		756916B52A2B7D20005FF14B /* XCTLInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 756916B32A2B7D20005FF14B /* XCTLInvocation.m */; };
+		756916B92A2B86AA005FF14B /* XCTLSwiftInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916B82A2B86AA005FF14B /* XCTLSwiftInvocation.swift */; };
+		756916BD2A2B91E7005FF14B /* NSArray+Enumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +154,10 @@
 		756916AB2A29A357005FF14B /* XCTLExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLExpression.swift; sourceTree = "<group>"; };
 		756916AE2A29CD2C005FF14B /* Invocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
 		756916B02A29D74E005FF14B /* TypeMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMapping.swift; sourceTree = "<group>"; };
+		756916B22A2B7D20005FF14B /* XCTLInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTLInvocation.h; sourceTree = "<group>"; };
+		756916B32A2B7D20005FF14B /* XCTLInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTLInvocation.m; sourceTree = "<group>"; };
+		756916B82A2B86AA005FF14B /* XCTLSwiftInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTLSwiftInvocation.swift; sourceTree = "<group>"; };
+		756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSArray+Enumerator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +317,7 @@
 			children = (
 				756916902A28C46D005FF14B /* XCTLEnumerator.swift */,
 				756916922A28C4B6005FF14B /* XCTLRange.swift */,
+				756916BB2A2B91DD005FF14B /* Extension */,
 			);
 			path = NativeTypes;
 			sourceTree = "<group>";
@@ -327,6 +336,8 @@
 			children = (
 				7569169F2A28FE20005FF14B /* XCTLRuntimeTypeInstance.h */,
 				756916A02A28FE20005FF14B /* XCTLRuntimeTypeInstance.m */,
+				756916B22A2B7D20005FF14B /* XCTLInvocation.h */,
+				756916B32A2B7D20005FF14B /* XCTLInvocation.m */,
 				756916A42A28FF05005FF14B /* module.modulemap */,
 			);
 			path = Instance;
@@ -337,8 +348,17 @@
 			children = (
 				756916AE2A29CD2C005FF14B /* Invocation.swift */,
 				756916B02A29D74E005FF14B /* TypeMapping.swift */,
+				756916B82A2B86AA005FF14B /* XCTLSwiftInvocation.swift */,
 			);
 			path = Interop;
+			sourceTree = "<group>";
+		};
+		756916BB2A2B91DD005FF14B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				756916BC2A2B91E7005FF14B /* NSArray+Enumerator.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7520C3E92A283AFC0010E7F8 /* XCTreeLang.h in Headers */,
+				756916B42A2B7D20005FF14B /* XCTLInvocation.h in Headers */,
 				756916A12A28FE20005FF14B /* XCTLRuntimeTypeInstance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,15 +499,18 @@
 				7520C42D2A283B1E0010E7F8 /* XCTLListStatement.swift in Sources */,
 				7520C4222A283B1E0010E7F8 /* XCTLInitStatement.swift in Sources */,
 				756916872A2851DF005FF14B /* XCTLStream.swift in Sources */,
+				756916B92A2B86AA005FF14B /* XCTLSwiftInvocation.swift in Sources */,
 				756916A22A28FE20005FF14B /* XCTLRuntimeTypeInstance.m in Sources */,
 				756916B12A29D74E005FF14B /* TypeMapping.swift in Sources */,
 				7520C41E2A283B1E0010E7F8 /* XCTLImmediateStatement.swift in Sources */,
 				756916892A286A90005FF14B /* XCTLSetStatement.swift in Sources */,
 				756916972A28DFE7005FF14B /* XCTLBreakStatement.swift in Sources */,
+				756916BD2A2B91E7005FF14B /* NSArray+Enumerator.swift in Sources */,
 				7520C4312A283B1E0010E7F8 /* XCTLRuntimeVariable.swift in Sources */,
 				756916912A28C46D005FF14B /* XCTLEnumerator.swift in Sources */,
 				756916AC2A29A357005FF14B /* XCTLExpression.swift in Sources */,
 				7520C42C2A283B1E0010E7F8 /* XCTLLessthanStatement.swift in Sources */,
+				756916B52A2B7D20005FF14B /* XCTLInvocation.m in Sources */,
 				7520C4332A283B1E0010E7F8 /* XCTLRuntimeVariableType.swift in Sources */,
 				7520C4202A283B1E0010E7F8 /* XCTLRootStatement.swift in Sources */,
 				756916932A28C4B6005FF14B /* XCTLRange.swift in Sources */,

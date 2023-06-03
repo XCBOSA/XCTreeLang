@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class XCTLRuntimeVariable {
+public class XCTLRuntimeVariable: NSObject {
     
     public var type: XCTLRuntimeVariableType
     public var rawValue: String

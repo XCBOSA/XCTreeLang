@@ -7,8 +7,16 @@
 
 import Foundation
 
+@objc
 public protocol XCTLEnumerator {
     
     func moveNext() -> XCTLRuntimeVariable
+    
+}
+
+@objc
+public protocol XCTLEnumeratorProvider {
+    
+    func provideEnumerator() -> XCTLEnumerator
     
 }

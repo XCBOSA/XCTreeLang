@@ -1,6 +1,7 @@
 //
 //  Dynamic
 //  Created by Mhd Hejazi on 4/15/20.
+//  Modify by XCBOSA on 6/3/23
 //  Copyright © 2020 Samabox. All rights reserved.
 //
 
@@ -14,6 +15,7 @@ class Invocation {
 
     var invocation: NSObject?
 
+    var typeEncoding: String?
     var numberOfArguments: Int = 0
     var returnLength: Int = 0
     var returnType: UnsafePointer<CChar>?
@@ -101,32 +103,52 @@ class Invocation {
             method(invocation, selector)
         }
     }
+    
+    private func getArgumentType(at index: NSInteger) -> String? {
+        guard let invocation = invocation else { return nil }
+        
+        let methodSignatureSelector = NSSelectorFromString("methodSignature")
+        let methodSignatureSignature = (@convention(c)(NSObject, Selector) -> NSObject).self
+        let methodSignatureMethod = unsafeBitCast(invocation.method(for: methodSignatureSelector), to: methodSignatureSignature)
+        
+        let methodSignature = methodSignatureMethod(invocation, methodSignatureSelector)
+        
+        let selector = NSSelectorFromString("getArgumentTypeAtIndex:")
+        let signature = (@convention(c)(NSObject, Selector, NSInteger) -> UnsafePointer<CChar>).self
+        let method = unsafeBitCast(methodSignature.method(for: selector), to: signature)
+        
+        let rawType = method(methodSignature, selector, index)
+        return NSString(cString: rawType, encoding: NSUTF8StringEncoding) as? String
+    }
 
     func setArgument(_ argument: Any?, at index: NSInteger) {
         guard let invocation = invocation else { return }
+        
+        let argument = TypeMapping.convertToObjCType(argument) ?? argument
+        guard let realArgumentType = self.getArgumentType(at: index) else { return }
 
         /// `[invocation setArgument:&argument atIndex:i + 2]`
         let selector = NSSelectorFromString("setArgument:atIndex:")
         let signature = (@convention(c)(NSObject, Selector, UnsafeRawPointer, Int) -> Void).self
         let method = unsafeBitCast(invocation.method(for: selector), to: signature)
-
-        if var valueArgument = argument as? NSValue {
-            /// Get the type byte size
-//            valueArgument = NSNumber(floatLiteral: argument as! Double)
-            let typeSize = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-            defer { typeSize.deallocate() }
-            NSGetSizeAndAlignment(valueArgument.objCType, typeSize, nil)
-
-            /// Get the actual value
-            let buffer = UnsafeMutablePointer<Int8>.allocate(capacity: typeSize.pointee)
-            defer { buffer.deallocate() }
-            valueArgument.getValue(buffer)
-
-            method(invocation, selector, buffer, index)
-        } else {
+        
+//        if let valueArgument = argument as? NSNumber {
+//            /// Get the type byte size
+////            valueArgument = NSNumber(floatLiteral: argument as! Double)
+//            let typeSize = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+//            defer { typeSize.deallocate() }
+//            NSGetSizeAndAlignment(valueArgument.objCType, typeSize, nil)
+//
+//            /// Get the actual value
+//            let buffer = UnsafeMutablePointer<Int8>.allocate(capacity: typeSize.pointee)
+//            defer { buffer.deallocate() }
+//            valueArgument.getValue(buffer)
+//
+//            method(invocation, selector, buffer, index)
+//        } else {
             withUnsafePointer(to: argument) { pointer in
                 method(invocation, selector, pointer, index)
-            }
+//            }
         }
     }
 

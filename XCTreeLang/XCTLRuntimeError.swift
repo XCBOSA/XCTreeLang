@@ -30,5 +30,8 @@ public enum XCTLRuntimeError: Error {
     case variableStackNoObject
     case variableStackNotEmptyAfterTerminator
     
+    case unknownTypeEncoding(name: String)
+    case callingTypeEncodingError
+    
 }
 
